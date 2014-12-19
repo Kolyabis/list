@@ -1,13 +1,22 @@
 .clear{
     clear:both;
 }
-body { margin: 10px 0 0; background: #fff;  font: 16px "Trebuchet MS", Arial, Sans-Serif; color: #444; }
+body {
+    margin: 10px 0 0;
+    background: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.4;
+}
 .center{
     /*height: 500px; /* можно заменить на min-height */
     text-align: center;
-}
-.clear{
-    clear:both;
 }
 .center  {
     height: 420px;
