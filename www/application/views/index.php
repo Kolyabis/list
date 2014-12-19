@@ -8,12 +8,12 @@
     <meta name="keywords" content="" />
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/script.js"></script>
+    <script src="/script/script.js"></script>
 </head>
 <body>
+    <div id="topBar"></div>
     <div>
-        Проба
-
+        <span id="logo"></span><span class="menu">menu1  menu2  menu3</span>
     </div>
 </body>
 </html>
