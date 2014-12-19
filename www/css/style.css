@@ -2,7 +2,7 @@
     clear:both;
 }
 body {
-    margin: 10px 0 0;
+    margin: 0px 0 0;
     background: #fff;
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: normal;
@@ -13,6 +13,34 @@ body {
     letter-spacing: 0em;
     word-spacing: 0em;
     line-height: 1.4;
+}
+#logo{
+    width: 470px;
+    height: 75px;
+    background:url(/images/logo.png) no-repeat top, left;
+    display: block;
+    margin: 20px 0px 20px 0px;
+    float: left;
+}
+#topBar{
+    height: 35px;
+    display: block;
+    margin: 0px 0px 10px 0px;
+    background-color: #BFBFBF;
+}
+.menu{
+    display: table-cell;
+    vertical-align: bottom;
+    height: 75px;
+    color: #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+}
+.menu:hover{
+    display: table-cell;
+    vertical-align: bottom;
+    height: 75px;
+    color: #787878;
+    border-bottom: 2px solid #787878;
 }
 .center{
     /*height: 500px; /* можно заменить на min-height */
@@ -70,11 +98,11 @@ body {
     margin-top: 10px;
 }
 .menu{
-    background: #4F81BD;
+    /*background: #4F81BD;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    margin: 1px 25px 1px 25px;
+    margin: 1px 25px 1px 25px;*/
 }
 #goUser{
     width: 440px;
