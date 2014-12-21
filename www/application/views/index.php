@@ -14,7 +14,7 @@
     <div id="body">
         <div id="logoMenu">
             <div id="logo"></div>
-            <div >
+            <div>
                 <div class="menu">menu1  menu2  menu3</div>
             </div>
             <div class="clear"></div>
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div id="footer">
-        footer
+        <span>footer</span>
         <div class="clear"></div>
     </div>
 </body>
