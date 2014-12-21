@@ -14,6 +14,11 @@ body {
     word-spacing: 0em;
     line-height: 1.4;
 }
+#body{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
 #logo{
     width: 470px;
     height: 75px;
@@ -23,7 +28,7 @@ body {
     float: left;
 }
 #topBar{
-    height: 35px;
+    height: 30px;
     display: block;
     margin: 0px 0px 10px 0px;
     background-color: #BFBFBF;
@@ -31,9 +36,12 @@ body {
 .menu{
     display: table-cell;
     vertical-align: bottom;
+    width: 470px;
     height: 75px;
     color: #BFBFBF;
     border-bottom: 1px solid #BFBFBF;
+    margin-left: auto;
+    margin-right: auto;
 }
 .menu:hover{
     display: table-cell;
@@ -41,6 +49,15 @@ body {
     height: 75px;
     color: #787878;
     border-bottom: 2px solid #787878;
+}
+#logoMenu{
+    margin-bottom: 5px;
+}
+#footer{
+    height: 60px;
+    display: block;
+    margin: 10px 0px 0px 0px;
+    background-color: #BFBFBF;
 }
 .center{
     /*height: 500px; /* можно заменить на min-height */
