@@ -34,7 +34,9 @@
             <div class="clear"></div>
         </div>
         <div id="footer">
-            <span>footer</span>
+            <span>
+                <div id="logoFooter"></div>
+            </span>
             <div class="clear"></div>
         </div>
     </div>
