@@ -70,22 +70,33 @@ body {
     border: 1px solid #AAAAAB;
     margin-bottom: 5px;
 }
+#bottonModule{
+    display: block;
+    max-width: 1000px;
+    width: 1000px;
+    padding: 5px;
+    border: 1px solid #AAAAAB;
+    margin-bottom: 5px;
+}
 #left{
     float: left;
-    width: 20%;
+    width: 17%;
     border: 1px solid #000066;
     margin-right: 5px;
+    padding: 5px;
 }
 #center{
     float: left;
-    width: 57%;
+    width: 60%;
     border: 1px solid #660c09;
+    padding: 5px;
 }
 #right{
     float: right;
-    width: 20%;
+    width: 17%;
     border: 1px solid #136632;
     margin-left: 5px;
+    padding: 5px;
 }
 #content{
     width: 100%;
