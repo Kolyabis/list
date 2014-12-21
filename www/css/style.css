@@ -81,20 +81,17 @@ body {
 #left{
     float: left;
     width: 17%;
-    border: 1px solid #000066;
     margin-right: 5px;
     padding: 5px;
 }
 #center{
     float: left;
     width: 60%;
-    border: 1px solid #660c09;
     padding: 5px;
 }
 #right{
     float: right;
     width: 17%;
-    border: 1px solid #136632;
     margin-left: 5px;
     padding: 5px;
 }
@@ -103,6 +100,16 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
+}
+#logoFooter{
+    width: 80px;
+    height: 40px;
+    background:url(/images/logo.png) no-repeat top, left;
+    display: block;
+    margin: 20px 0px 0px 0px;
+    float: right;
+    background-size: 80px 30px, auto;
+    position:relative; left:5px; top:90px;
 }
 /***********************************************************************************************************************/
 
