@@ -14,7 +14,7 @@ body {
     word-spacing: 0em;
     line-height: 1.4;
 }
-#body{
+.body{
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -24,7 +24,7 @@ body {
     height: 130px;
     background:url(/images/logo.png) no-repeat top, left;
     display: block;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
     float: left;
 }
 #topBar{
@@ -53,20 +53,51 @@ body {
 #logoMenu{
     margin-bottom: 5px;
 }
-#footer{
-    height: 60px;
-    display: block;
-    margin: 10px 0px 0px 0px;
-    background-color: #3B5998;
-}
-#footer ,span{
+#footer,span{
     max-width: 1000px;
     width: 1000px;
     height: 150px;
     margin-left: auto;
     margin-right: auto;
+    padding: 5px;
     background-color: #3B5998;
 }
+#topModule{
+    display: block;
+    max-width: 1000px;
+    width: 1000px;
+    padding: 5px;
+    border: 1px solid #AAAAAB;
+    margin-bottom: 5px;
+}
+#left{
+    float: left;
+    width: 20%;
+    border: 1px solid #000066;
+    margin-right: 5px;
+}
+#center{
+    float: left;
+    width: 57%;
+    border: 1px solid #660c09;
+}
+#right{
+    float: right;
+    width: 20%;
+    border: 1px solid #136632;
+    margin-left: 5px;
+}
+#content{
+    max-width: 1000px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/***********************************************************************************************************************/
+
+
+
+
 .center{
     /*height: 500px; /* можно заменить на min-height */
     text-align: center;
