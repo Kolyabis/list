@@ -1,4 +1,3 @@
-<?php //; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,8 +11,30 @@
 </head>
 <body>
     <div id="topBar"></div>
-    <div>
-        <span id="logo"></span><span class="menu">menu1  menu2  menu3</span>
+    <div id="body">
+        <div id="logoMenu">
+            <div id="logo"></div>
+            <div >
+                <div class="menu">menu1  menu2  menu3</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="topModule">
+            topModule
+            <div class="clear"></div>
+        </div>
+        <div id="content">
+            content
+            <div class="clear"></div>
+        </div>
+        <div id="bottonModule">
+            bottonModule
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div id="footer">
+        footer
+        <div class="clear"></div>
     </div>
 </body>
 </html>
