@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="topBar"></div>
-    <div id="body">
+    <div class="body">
         <div id="logoMenu">
             <div id="logo"></div>
             <div>
@@ -24,17 +24,19 @@
             <div class="clear"></div>
         </div>
         <div id="content">
-            content
+            <div id="left">left</div>
+            <div id="center">center</div>
+            <div id="right">right</div>
             <div class="clear"></div>
         </div>
         <div id="bottonModule">
             bottonModule
             <div class="clear"></div>
         </div>
-    </div>
-    <div id="footer">
-        <span>footer</span>
-        <div class="clear"></div>
+        <div id="footer">
+            <span>footer</span>
+            <div class="clear"></div>
+        </div>
     </div>
 </body>
 </html>
