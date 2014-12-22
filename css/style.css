@@ -1,0 +1,230 @@
+.clear{
+    clear:both;
+}
+body {
+    margin: 0px 0 0;
+    background: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 15px;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.4;
+}
+.body{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo{
+    width: 310px;
+    height: 130px;
+    background:url(/images/logo.png) no-repeat top, left;
+    display: block;
+    margin: 20px 0px 0px 0px;
+    float: left;
+}
+#topBar{
+    height: 30px;
+    display: block;
+    margin: 0px 0px 10px 0px;
+    background-color: #9F0002;
+}
+.menu{
+    display: table-cell;
+    vertical-align: bottom;
+    width: 470px;
+    height: 75px;
+    color: #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+    margin-left: auto;
+    margin-right: auto;
+}
+.menu:hover{
+    display: table-cell;
+    vertical-align: bottom;
+    height: 75px;
+    color: #787878;
+    border-bottom: 2px solid #787878;
+}
+#logoMenu{
+    margin-bottom: 5px;
+}
+#footer,span{
+    max-width: 1000px;
+    width: 1000px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    background-color: #3B5998;
+}
+#topModule{
+    display: block;
+    max-width: 1000px;
+    width: 1000px;
+    padding: 5px;
+    border: 1px solid #AAAAAB;
+    margin-bottom: 5px;
+}
+#bottonModule{
+    display: block;
+    max-width: 1000px;
+    width: 1000px;
+    padding: 5px;
+    border: 1px solid #AAAAAB;
+    margin-bottom: 5px;
+}
+#left{
+    float: left;
+    width: 17%;
+    margin-right: 5px;
+    padding: 5px;
+}
+#center{
+    float: left;
+    width: 60%;
+    padding: 5px;
+}
+#right{
+    float: right;
+    width: 17%;
+    margin-left: 5px;
+    padding: 5px;
+}
+#content{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+#logoFooter{
+    width: 80px;
+    height: 40px;
+    background:url(/images/logo.png) no-repeat top, left;
+    display: block;
+    margin: 20px 0px 0px 0px;
+    float: right;
+    background-size: 80px 30px, auto;
+    position:relative; left:5px; top:90px;
+}
+/***********************************************************************************************************************/
+
+
+
+
+.center{
+    /*height: 500px; /* можно заменить на min-height */
+    text-align: center;
+}
+.center  {
+    height: 420px;
+    width: 720px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #000000;
+    padding: 10px 15px 25px 15px;
+    border-radius: 55px;
+
+}
+.center:before { /* для IE8+ */
+    content: "";
+    /*display: inline-block;*/
+    min-height: inherit;
+    height: 100%;
+    vertical-align: middle;
+}
+#pageTitle{
+    text-align: center;
+    text-transform: uppercase; /* Заглавные буквы */
+    font-size: 2em;
+    color: #4F81BD;
+}
+#foto{
+    margin-bottom: 10px;
+}
+#old_vidpovid{
+    height: 30px;
+    background: #4F81BD;
+    color: #ffffff;
+    border: 2px solid #385D8A;
+    padding: 5px 10px 5px 10px;
+    float: left;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+#otstup{
+    margin-bottom: 1px;
+}
+#submit{
+    height: 30px;
+    background: #4F81BD;
+    color: #ffffff;
+    border: 2px solid #385D8A;
+    padding: 5px 10px 5px 10px;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+.menu{
+    /*background: #4F81BD;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 1px 25px 1px 25px;*/
+}
+#goUser{
+    width: 440px;
+    float: right;
+}
+
+
+.content_wrapper {
+    max-width: 500px;
+    min-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    float: right;
+    margin-right: 15px;
+}
+#responds {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+#responds li {
+    list-style: none;
+    padding: 10px;
+    background: rgb(182, 232, 255);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    max-width: 400px;
+    font-family: arial;
+    font-size: 13px;
+    border: 1px solid #adaa9f;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -khtml-border-radius: 10px;
+}
+.del_wrapper {
+    float: right;
+}
+.form_style #contentText {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+.form_style #FormSubmit {
+    display: block;
+    background: #003366;
+    border: 1px solid #000066;
+    color: #FFFFFF;
+    margin-top: 5px;
+}
