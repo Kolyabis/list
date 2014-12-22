@@ -5,10 +5,10 @@ set_include_path(get_include_path()
     .PATH_SEPARATOR.'application/controllers'
     .PATH_SEPARATOR.'application/models'
     .PATH_SEPARATOR.'application/views');
-function core($class){
+function init($class){
     include $class.'.php';
 }
-spl_autoload_register('autoload');
+spl_autoload_register('init');
 class Db_ext {
     protected static $dsn = 'mysql:dbname=sid2;host=localhost';
     protected static $user = 'root';
