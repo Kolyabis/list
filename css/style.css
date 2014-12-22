@@ -33,22 +33,23 @@ body {
     margin: 0px 0px 10px 0px;
     background-color: #9F0002;
 }
-.menu{
+.mainMenu{
     display: table-cell;
     vertical-align: bottom;
-    width: 470px;
     height: 75px;
     color: #BFBFBF;
-    border-bottom: 1px solid #BFBFBF;
     margin-left: auto;
     margin-right: auto;
 }
+.menu{
+    color: #BFBFBF;
+    border-bottom: 3px solid #BFBFBF;
+    margin-right: 8px;
+}
 .menu:hover{
-    display: table-cell;
-    vertical-align: bottom;
-    height: 75px;
-    color: #787878;
-    border-bottom: 2px solid #787878;
+    color: #9F0002;
+    border-bottom: 3px solid #9F0002;
+    margin-right: 8px;
 }
 #logoMenu{
     margin-bottom: 5px;
@@ -62,14 +63,36 @@ body {
     padding: 5px;
     background-color: #3B5998;
 }
-#topModule{
-    display: block;
-    max-width: 1000px;
-    width: 1000px;
+.topModule{
+    max-width: 800px;
+    width: 800px;
     padding: 5px;
-    border: 1px solid #AAAAAB;
     margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
+#topModule1{
+     background-color: #787878;
+     width: 240px;
+     height: 110px;
+     float: left;
+     margin: 5px;
+}
+#topModule2{
+    background-color: #3B5998;
+    width: 240px;
+    height: 110px;
+    float: left;
+    margin: 5px;
+}
+#topModule3{
+    background-color: #9F0002;
+    width: 240px;
+    height: 110px;
+    float: left;
+    margin: 5px;
+}
+
 #bottonModule{
     display: block;
     max-width: 1000px;

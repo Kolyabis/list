@@ -10,17 +10,54 @@
     <script src="/script/script.js"></script>
 </head>
 <body>
+<pre>
+    <?php //print_r($params['mainMenu']); ?>
+</pre>
     <div id="topBar"></div>
     <div class="body">
         <div id="logoMenu">
             <div id="logo"></div>
             <div>
-                <div class="menu">menu1  menu2  menu3</div>
+                <div class="mainMenu">
+                    <?php print_r($params['mainMenu']); ?>
+                    <?php
+                        $mainMenu = $params['mainMenu'];
+                        $cnt = count($mainMenu)-1;
+                        echo "<ul id='ddmenu'>";
+                        for($i = 0; $i <= $cnt; $i++){
+                            if(empty($mainMenu[$i]['child'])){
+                                echo "<div style='float:left;'><li><a href=/".$mainMenu[$i]['page']." class='menu' style='text-decoration: none;'>".$mainMenu[$i]['page']."</a></li></div>";
+                                echo "<ul>";
+                                for($n = 0; $n <= $cnt; $n++){
+                                    if($mainMenu[$n]['child'] == $mainMenu[$i]['id']){
+                                            echo "<li>".$mainMenu[$n]['page']."</li>";
+                                    }
+                                }
+                                echo "</ul>";
+                            }
+                        }
+                        /*for($i = 0; $i <= $cnt; $i++){
+                           if(empty($mainMenu[$i]['child'])){
+                               echo "<div style='float:left;'><li><a href=/".$mainMenu[$i]['page']." class='menu' style='text-decoration: none;'>".$mainMenu[$i]['page']."</a></li></div>";
+                           }
+                            echo "<ul>";
+                            foreach($mainMenu[$i] as $key){
+                                if(!empty($mainMenu[$i]['child'])){
+                                    echo "<li>".$mainMenu[$i]['page']."</li>";
+                                }
+                            }
+                            echo "</ul>";
+                        }*/
+                        echo "</ul>";
+                    ?>
+                </div>
             </div>
             <div class="clear"></div>
         </div>
-        <div id="topModule">
-            topModule
+        <div class="topModule">
+            <div id="topModule1"></div>
+            <div id="topModule2"></div>
+            <div id="topModule3"></div>
             <div class="clear"></div>
         </div>
         <div id="content">
