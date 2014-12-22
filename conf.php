@@ -8,7 +8,7 @@ set_include_path(get_include_path()
 function core($class){
     include $class.'.php';
 }
-spl_autoload_register('core');
+spl_autoload_register('autoload');
 class Db_ext {
     protected static $dsn = 'mysql:dbname=sid2;host=localhost';
     protected static $user = 'root';
