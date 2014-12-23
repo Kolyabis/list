@@ -45,11 +45,18 @@ body {
     color: #BFBFBF;
     border-bottom: 3px solid #BFBFBF;
     margin-right: 8px;
+    text-decoration: none;
 }
 .menu:hover{
     color: #9F0002;
     border-bottom: 3px solid #9F0002;
     margin-right: 8px;
+}
+#ddmenu{
+    width: 310px;
+    height: 130px;
+    border: 1px solid #000000;
+    display: block;
 }
 #logoMenu{
     margin-bottom: 5px;
