@@ -2,30 +2,30 @@
 class mod_menu{
     /* Get_Menu */
     public function get_menu(){
-        $db = mysql_connect('localhost','root','');
-        if(!$db){
-            exit(mysql_error());
-        }
-        if(!mysql_select_db('2z',$db)){
-            exit(mysql_error());
-        }
-        $sql = "select id, page, parent_id from mainmenu";
-        $result = mysql_query($sql);
-        if(!$result){
-            return null;
-        }
-        $mainMenu = array();
-        if(mysql_num_rows($result) != 0){
-            for($i = 0; $i < mysql_num_rows($result); $i++){
-                $row = mysql_fetch_array($result, MYSQL_ASSOC);
-                if(empty($mainMenu[$row['parent_id']])){
-                    $mainMenu[$row['parent_id']] = array();
-                }
-                $mainMenu[$row['parent_id']][] = $row;
-            }
-        }
-        echo '<pre>';
-        print_r($mainMenu);
+       $db = mysql_connect('localhost','root','');
+         if(!$db){
+             exit(mysql_error());
+         }
+         if(!mysql_select_db('2z',$db)){
+             exit(mysql_error());
+         }
+         $sql = "select id, page, parent_id from mainmenu";
+         $result = mysql_query($sql);
+         if(!$result){
+             return null;
+         }
+         $mainMenu = array();
+         if(mysql_num_rows($result) != 0){
+             for($i = 0; $i < mysql_num_rows($result); $i++){
+                 $row = mysql_fetch_array($result, MYSQL_ASSOC);
+                 if(empty($mainMenu[$row['parent_id']])){
+                     $mainMenu[$row['parent_id']] = array();
+                 }
+                 $mainMenu[$row['parent_id']][] = $row;
+             }
+         }
+
+         return $mainMenu;
         /*$sqlCnt = $db->query("select count(id) from mainmenu where parent_id > 0");
         $cnt = $sqlCnt->fetchColumn();
         $sql = $db->query("select id, page, parent_id from mainmenu");
@@ -52,5 +52,6 @@ class mod_menu{
         echo '<pre>';
         print_r($mainMenu);
         echo '</pre>';*/
+
     }
 }
