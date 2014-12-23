@@ -30,15 +30,39 @@
                                 echo "<ul >";
                             }
                             for($i = 0; $i < count($arr[$parent_id]) ;$i++){
-                                echo "<li id='ddmenu' style='float:left;'><a href='#' class='menu' >".$arr[$parent_id][$i]['page']."</a>";
+                                echo "<li id='ddmenu-".$parent_id."' style='float:left;'><a href='#' class='menu' >".$arr[$parent_id][$i]['page']."</a>";
                                 view_menu($arr, $arr[$parent_id][$i]['id']);
-                                echo "</li>";
+                                echo "</li>\n";
                             }
-                            echo "</ul>";
+                            echo "</ul>\n";
                         }
                         view_menu($params['mainMenu']);
                     ?>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
             <div class="clear"></div>
         </div>
