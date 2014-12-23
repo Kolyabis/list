@@ -4,7 +4,7 @@ class IndexModel{
         $db = Db_ext::getInstance();
         $lib = new lib();
         $menu = new mod_menu();
-        $mainMenu = $menu->mainMenu($db);
+        $mainMenu = $menu->get_menu($db);
         $params['mainMenu'] = $mainMenu;
         $lib->checkArray($params);
         ob_start();
