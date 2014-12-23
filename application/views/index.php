@@ -19,36 +19,24 @@
             <div id="logo"></div>
             <div>
                 <div class="mainMenu">
-                    <?php print_r($params['mainMenu']); ?>
                     <?php
-                        $mainMenu = $params['mainMenu'];
-                        $cnt = count($mainMenu)-1;
-                        echo "<ul id='ddmenu'>";
-                        for($i = 0; $i <= $cnt; $i++){
-                            if(empty($mainMenu[$i]['child'])){
-                                echo "<div style='float:left;'><li><a href=/".$mainMenu[$i]['page']." class='menu' style='text-decoration: none;'>".$mainMenu[$i]['page']."</a></li></div>";
-                                echo "<ul>";
-                                for($n = 0; $n <= $cnt; $n++){
-                                    if($mainMenu[$n]['child'] == $mainMenu[$i]['id']){
-                                            echo "<li>".$mainMenu[$n]['page']."</li>";
-                                    }
-                                }
-                                echo "</ul>";
+                        function view_menu($arr, $parent_id = 0){
+                            if(empty($arr[$parent_id])){
+                                return;
                             }
-                        }
-                        /*for($i = 0; $i <= $cnt; $i++){
-                           if(empty($mainMenu[$i]['child'])){
-                               echo "<div style='float:left;'><li><a href=/".$mainMenu[$i]['page']." class='menu' style='text-decoration: none;'>".$mainMenu[$i]['page']."</a></li></div>";
-                           }
-                            echo "<ul>";
-                            foreach($mainMenu[$i] as $key){
-                                if(!empty($mainMenu[$i]['child'])){
-                                    echo "<li>".$mainMenu[$i]['page']."</li>";
-                                }
+                            if($parent_id == 0){
+                                echo "<ul>";
+                            }else{
+                                echo "<ul >";
+                            }
+                            for($i = 0; $i < count($arr[$parent_id]) ;$i++){
+                                echo "<li id='ddmenu' style='float:left;'><a href='#' class='menu' >".$arr[$parent_id][$i]['page']."</a>";
+                                view_menu($arr, $arr[$parent_id][$i]['id']);
+                                echo "</li>";
                             }
                             echo "</ul>";
-                        }*/
-                        echo "</ul>";
+                        }
+                        view_menu($params['mainMenu']);
                     ?>
                 </div>
             </div>
