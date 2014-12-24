@@ -25,7 +25,7 @@ class mod_menu{
              }
          }
          return $mainMenu;
-        /*$sql = $db->query("select id, page, parent_id from mainmenu");
+         /*$sql = $db->query("select id, page, parent_id from mainmenu");
         $result = $sql->fetchAll(PDO::FETCH_ASSOC);
         if(!$result){
             return null;
