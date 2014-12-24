@@ -23,9 +23,8 @@
                                 return;
                             }
                             echo "<ul id='ddmenu'>";
-                            //echo "<ul class='sf-menu'>";
                             for($i = 0; $i < count($arr[$parent_id]) ;$i++){
-                                echo "<li class='current' id='ddmenu-".$parent_id."' style='float:left;'><a href='#' class='menu' >".$arr[$parent_id][$i]['page']."</a>";
+                                echo "<li id='ddmenu-".$parent_id."' style='float:left;'><a href='#'>".$arr[$parent_id][$i]['page']."</a>";
                                 view_menu($arr, $arr[$parent_id][$i]['id']);
                                 echo "</li>\n";
                             }
