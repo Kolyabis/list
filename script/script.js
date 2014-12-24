@@ -1,7 +1,8 @@
+/**************** Метод обработки выпадающего меню **********************/
 $(document).ready(function(){
-        $('a').on('click', function(e){
+        /*$('a').on('click', function(e){
             e.preventDefault();
-        });
+        });*/
         $('#ddmenu li').hover(function () {
             clearTimeout($.data(this,'timer'));
             $('ul',this).stop(true,true).slideDown(200);
@@ -11,6 +12,8 @@ $(document).ready(function(){
             }, this), 100));
         });
  });
+/*************************************************************************/
+
 
 
 
