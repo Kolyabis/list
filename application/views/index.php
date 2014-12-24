@@ -24,7 +24,7 @@
                             }
                             echo "<ul id='ddmenu'>";
                             for($i = 0; $i < count($arr[$parent_id]) ;$i++){
-                                echo "<li id='ddmenu-".$parent_id."' style='float:left;'><a href='#'>".$arr[$parent_id][$i]['page']."</a>";
+                                echo "<li id='ddmenu-".$parent_id."' ><a href='/".$arr[$parent_id][$i]['controller']."'>".$arr[$parent_id][$i]['page']."</a>";
                                 view_menu($arr, $arr[$parent_id][$i]['id']);
                                 echo "</li>\n";
                             }
@@ -38,9 +38,9 @@
             <div class="clear"></div>
         </div>
         <div class="topModule">
-            <div id="topModule1"></div>
-            <div id="topModule2"></div>
-            <div id="topModule3"></div>
+            <div id="topModule1">sdfsdf</div>
+            <div id="topModule2">sdsdf</div>
+            <div id="topModule3">sdfsdf</div>
             <div class="clear"></div>
         </div>
         <div id="content">
