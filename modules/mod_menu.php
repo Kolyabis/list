@@ -24,11 +24,12 @@ class mod_menu{
                  $mainMenu[$row['parent_id']][] = $row;
              }
          }
-
+        //echo '<pre>';
+        //print_r($mainMenu);
          return $mainMenu;
-        /*$sqlCnt = $db->query("select count(id) from mainmenu where parent_id > 0");
-        $cnt = $sqlCnt->fetchColumn();
-        $sql = $db->query("select id, page, parent_id from mainmenu");
+        //$sqlCnt = $db->query("select count(id) from mainmenu where parent_id > 0");
+        //$cnt = $sqlCnt->fetchColumn();
+        /*$sql = $db->query("select id, page, parent_id from mainmenu");
         $result = $sql->fetchAll(PDO::FETCH_ASSOC);
         if(!$result){
             return null;
