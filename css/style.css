@@ -7,7 +7,7 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: normal;
 
-    font-size: 18px;
+    font-size: 15px;
     text-transform: none;
     text-decoration: none;
     letter-spacing: 0em;
@@ -68,10 +68,11 @@ body {
 .topModule{
     max-width: 800px;
     width: 800px;
-    padding: 5px;
     margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 4%;
+    font-size: 10px;
 }
 #topModule1{
      background-color: #787878;
@@ -79,6 +80,8 @@ body {
      height: 110px;
      float: left;
      margin: 5px;
+     color: #ffffff;
+     padding: 5px;
 }
 #topModule2{
     background-color: #3B5998;
@@ -86,6 +89,8 @@ body {
     height: 110px;
     float: left;
     margin: 5px;
+    color: #ffffff;
+    padding: 5px;
 }
 #topModule3{
     background-color: #9F0002;
@@ -93,32 +98,38 @@ body {
     height: 110px;
     float: left;
     margin: 5px;
+    color: #ffffff;
+    padding: 5px;
 }
 
 #bottonModule{
     display: block;
-    max-width: 1000px;
-    width: 1000px;
-    padding: 5px;
-    border: 1px solid #AAAAAB;
+    max-width: 988px;
+    width: 100%;
     margin-bottom: 5px;
+    font-size: 12px;
+    border: 1px solid #AAAAAB;
+    padding: 5px 10px 5px 10px;
 }
 #left{
     float: left;
     width: 17%;
     margin-right: 5px;
     padding: 5px;
+    border: 1px solid #AAAAAB;
 }
 #center{
     float: left;
     width: 60%;
     padding: 5px;
+    border: 1px solid #AAAAAB;
+    margin: 0px 5px 0px 5px;
 }
 #right{
     float: right;
     width: 17%;
-    margin-left: 5px;
     padding: 5px;
+    border: 1px solid #AAAAAB;
 }
 #content{
     width: 100%;
@@ -201,81 +212,7 @@ body {
     float: right;
 }
 
-
-.content_wrapper {
-    max-width: 500px;
-    min-width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-    float: right;
-    margin-right: 15px;
-}
-#responds {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-#responds li {
-    list-style: none;
-    padding: 10px;
-    background: rgb(182, 232, 255);
-    margin-bottom: 5px;
-    border-radius: 5px;
-    max-width: 400px;
-    font-family: arial;
-    font-size: 13px;
-    border: 1px solid #adaa9f;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    -khtml-border-radius: 10px;
-}
-.del_wrapper {
-    float: right;
-}
-.form_style #contentText {
-    border: 1px solid #CCCCCC;
-    border-radius: 5px;
-}
-.form_style #FormSubmit {
-    display: block;
-    background: #003366;
-    border: 1px solid #000066;
-    color: #FFFFFF;
-    margin-top: 5px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*********************************** Стили для выпадающего меню ******************************************/
 #ddmenu {
     display: block;
     width: 100%;
@@ -303,15 +240,16 @@ body {
 
 #ddmenu ul {
     position: absolute;
-    top: 30px;
+    top: 27px;
     width: 150px;
     background: #fff;
     display: none;
     margin: 0;
     padding: 10px 0px 10px 10px;
     list-style: none;
-    border-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 /* strela #ddmenu ul:after {
@@ -358,7 +296,7 @@ body {
 }
 #ddmenu ul li ul{
     position: absolute;
-    top: 30px;
+    top: 27px;
     width: 150px;
     background: #fff;
     display: none;
@@ -366,7 +304,8 @@ body {
     padding: 10px 0px 10px 10px;
     list-style: none;
     border-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 #ddmenu ul li li {
     display: block;
@@ -385,3 +324,4 @@ body {
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
+/*********************************** Стили для выпадающего меню ******************************************/
