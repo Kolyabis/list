@@ -27,7 +27,7 @@
                             if($parent_id == 0){
                                 echo "<ul>";
                             }else{
-                                echo "<ul >";
+                                echo "<ul style='display:none;'>";
                             }
                             for($i = 0; $i < count($arr[$parent_id]) ;$i++){
                                 echo "<li id='ddmenu-".$parent_id."' style='float:left;'><a href='#' class='menu' >".$arr[$parent_id][$i]['page']."</a>";
