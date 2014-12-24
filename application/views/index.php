@@ -10,27 +10,22 @@
     <script src="/script/script.js"></script>
 </head>
 <body>
-<pre>
-    <?php //print_r($params['mainMenu']); ?>
-</pre>
     <div id="topBar"></div>
     <div class="body">
         <div id="logoMenu">
             <div id="logo"></div>
             <div>
                 <div class="mainMenu">
+                    <nav>
                     <?php
                         function view_menu($arr, $parent_id = 0){
                             if(empty($arr[$parent_id])){
                                 return;
                             }
-                            if($parent_id == 0){
-                                echo "<ul>";
-                            }else{
-                                echo "<ul style='display:none;'>";
-                            }
+                            echo "<ul id='ddmenu'>";
+                            //echo "<ul class='sf-menu'>";
                             for($i = 0; $i < count($arr[$parent_id]) ;$i++){
-                                echo "<li id='ddmenu-".$parent_id."' style='float:left;'><a href='#' class='menu' >".$arr[$parent_id][$i]['page']."</a>";
+                                echo "<li class='current' id='ddmenu-".$parent_id."' style='float:left;'><a href='#' class='menu' >".$arr[$parent_id][$i]['page']."</a>";
                                 view_menu($arr, $arr[$parent_id][$i]['id']);
                                 echo "</li>\n";
                             }
@@ -38,31 +33,8 @@
                         }
                         view_menu($params['mainMenu']);
                     ?>
+                    </nav>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
             <div class="clear"></div>
         </div>
