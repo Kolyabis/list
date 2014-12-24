@@ -1,6 +1,6 @@
 <?php
 class mod_menu{
-    /* Get_Menu */
+    /*********************************** Get_Menu ********************************/
     public function get_menu(){
        $db = mysql_connect('localhost','root','');
          if(!$db){
@@ -9,7 +9,7 @@ class mod_menu{
          if(!mysql_select_db('2z',$db)){
              exit(mysql_error());
          }
-         $sql = "select id, page, parent_id from mainmenu";
+         $sql = "select id, page, parent_id, controller from mainmenu";
          $result = mysql_query($sql);
          if(!$result){
              return null;
@@ -49,6 +49,6 @@ class mod_menu{
         echo '<pre>';
         print_r($mainMenu);
         echo '</pre>';*/
-
     }
+    /**************************************************************************/
 }
