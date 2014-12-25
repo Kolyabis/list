@@ -14,7 +14,7 @@ function lib($class){
     require 'lib/'.$class.'.php';
 }
 spl_autoload_register('lib');
-class Db_ext {
+class Db {
     protected static $dsn = 'mysql:dbname=2z;host=localhost';
     protected static $user = 'root';
     protected static $password = '';
@@ -31,6 +31,7 @@ class Db_ext {
                 echo $error->getLine().'<br>';
             }
         }
+        print_r(self::$_instance);
     }
     protected function __construct(){}
     protected function __clone(){}

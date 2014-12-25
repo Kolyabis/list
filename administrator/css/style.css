@@ -6,7 +6,6 @@ body {
     background: #fff;
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: normal;
-
     font-size: 15px;
     text-transform: none;
     text-decoration: none;
@@ -14,10 +13,51 @@ body {
     word-spacing: 0em;
     line-height: 1.4;
 }
-.body{
-    max-width: 1000px;
+.bodyForm{
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    box-shadow: 0 0 20px #000000;
+    border-radius: 4px;
+}
+#formCp{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+#cpanel{
+    width: 310px;
+    height: 90px;
+    background:url(/images/logo.png) no-repeat top, left;
+    display: block;
+    margin-bottom: 10px;
+    background-size: 200px 80px, auto;
+}
+#buttonCp{
+    margin-top: 10px;
+    color: #ffffff;
+    background: #9F0002;
+    padding: 5px 20px 5px 20px;
+    border-radius: 3px;
+    border: 1px solid #787878;
+    box-shadow: 0 0 10px #787878;
+}
+#buttonCp:hover{
+    margin-top: 10px;
+    color: #9F0002;
+    background: #b1b1b1;
+    padding: 5px 20px 5px 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px #9F0002;
+}
+p{
+    font-size: 18px;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.4;
+
 }
 #logo{
     width: 310px;
@@ -30,9 +70,23 @@ body {
 #topBar{
     height: 30px;
     display: block;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 20px 0px;
     background-color: #9F0002;
 }
+#error{
+    background: #c48283;
+    border: 1px solid #787878;
+    color: #ffffff;
+    padding: 6px;
+    border-radius: 4px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+
+
 .mainMenu{
     display: table-cell;
     vertical-align: bottom;

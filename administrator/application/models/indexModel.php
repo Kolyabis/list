@@ -1,8 +1,10 @@
 <?php
 class IndexModel{
     public function listGo($file,$params = null){
-        $db = Db_ext::getInstance();
-        $lib = new lib();
+        $db = Db::getInstance();
+        //var_dump($db);
+        $lib = new lib($db);
+        $lib->checkUser($log = null, $pass = null, $db);
         /*$menu = new mod_menu();
         $mainMenu = $menu->get_menu($db);
         $params['mainMenu'] = $mainMenu;*/
