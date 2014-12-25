@@ -1,0 +1,327 @@
+.clear{
+    clear:both;
+}
+body {
+    margin: 0px 0 0;
+    background: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: normal;
+
+    font-size: 15px;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.4;
+}
+.body{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo{
+    width: 310px;
+    height: 130px;
+    background:url(/images/logo.png) no-repeat top, left;
+    display: block;
+    margin: 20px 0px 0px 0px;
+    float: left;
+}
+#topBar{
+    height: 30px;
+    display: block;
+    margin: 0px 0px 10px 0px;
+    background-color: #9F0002;
+}
+.mainMenu{
+    display: table-cell;
+    vertical-align: bottom;
+    height: 75px;
+    color: #BFBFBF;
+    margin-left: auto;
+    margin-right: auto;
+}
+.menu{
+    /*color: #BFBFBF;
+    border-bottom: 3px solid #BFBFBF;
+    margin-right: 8px;*/
+    text-decoration: none;
+}
+.menu:hover{
+    /*color: #9F0002;
+    border-bottom: 3px solid #9F0002;
+    margin-right: 8px;*/
+}
+
+#logoMenu{
+    margin-bottom: 5px;
+}
+#footer,span{
+    max-width: 1000px;
+    width: 1000px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    background-color: #3B5998;
+}
+.topModule{
+    max-width: 800px;
+    width: 800px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4%;
+    font-size: 10px;
+}
+#topModule1{
+     background-color: #787878;
+     width: 240px;
+     height: 110px;
+     float: left;
+     margin: 5px;
+     color: #ffffff;
+     padding: 5px;
+}
+#topModule2{
+    background-color: #3B5998;
+    width: 240px;
+    height: 110px;
+    float: left;
+    margin: 5px;
+    color: #ffffff;
+    padding: 5px;
+}
+#topModule3{
+    background-color: #9F0002;
+    width: 240px;
+    height: 110px;
+    float: left;
+    margin: 5px;
+    color: #ffffff;
+    padding: 5px;
+}
+
+#bottonModule{
+    display: block;
+    max-width: 988px;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 12px;
+    border: 1px solid #AAAAAB;
+    padding: 5px 10px 5px 10px;
+}
+#left{
+    float: left;
+    width: 17%;
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px solid #AAAAAB;
+}
+#center{
+    float: left;
+    width: 60%;
+    padding: 5px;
+    border: 1px solid #AAAAAB;
+    margin: 0px 5px 0px 5px;
+}
+#right{
+    float: right;
+    width: 17%;
+    padding: 5px;
+    border: 1px solid #AAAAAB;
+}
+#content{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+#logoFooter{
+    width: 80px;
+    height: 40px;
+    background:url(/images/logo.png) no-repeat top, left;
+    display: block;
+    margin: 20px 0px 0px 0px;
+    float: right;
+    background-size: 80px 30px, auto;
+    position:relative; left:5px; top:90px;
+}
+/***********************************************************************************************************************/
+
+
+
+
+.center{
+    /*height: 500px; /* можно заменить на min-height */
+    text-align: center;
+}
+.center  {
+    height: 420px;
+    width: 720px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #000000;
+    padding: 10px 15px 25px 15px;
+    border-radius: 55px;
+
+}
+.center:before { /* для IE8+ */
+    content: "";
+    /*display: inline-block;*/
+    min-height: inherit;
+    height: 100%;
+    vertical-align: middle;
+}
+#pageTitle{
+    text-align: center;
+    text-transform: uppercase; /* Заглавные буквы */
+    font-size: 2em;
+    color: #4F81BD;
+}
+#foto{
+    margin-bottom: 10px;
+}
+#old_vidpovid{
+    height: 30px;
+    background: #4F81BD;
+    color: #ffffff;
+    border: 2px solid #385D8A;
+    padding: 5px 10px 5px 10px;
+    float: left;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+#otstup{
+    margin-bottom: 1px;
+}
+#submit{
+    height: 30px;
+    background: #4F81BD;
+    color: #ffffff;
+    border: 2px solid #385D8A;
+    padding: 5px 10px 5px 10px;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+#goUser{
+    width: 440px;
+    float: right;
+}
+
+/*********************************** Стили для выпадающего меню ******************************************/
+#ddmenu {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    outline: none;
+    color: #8aa8bd;
+}
+
+#ddmenu li { display: block; position: relative; float: left; color: #BFBFBF;}
+
+#ddmenu li a {
+    display: block;
+    float: left;
+    padding: 0 12px;
+    text-decoration: none;
+    color: #BFBFBF;
+    border-bottom: 2px solid #BFBFBF;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#ddmenu li:hover > a { color: #9F0002; border-bottom: 2px solid #9F0002;}
+
+#ddmenu ul {
+    position: absolute;
+    top: 27px;
+    width: 150px;
+    background: #fff;
+    display: none;
+    margin: 0;
+    padding: 10px 0px 10px 10px;
+    list-style: none;
+    border-radius: 1px;
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* strela #ddmenu ul:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 8px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: #fff transparent;
+}
+
+#ddmenu ul:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 4px;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1) transparent;
+}*/
+
+
+#ddmenu ul li {
+    display: block;
+    width: 100%;
+    font-size: 0.9em;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+#ddmenu ul li a {
+    display: block;
+    width: 80%;
+    padding: 5px;
+    line-height: 1.4em;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#ddmenu ul li ul{
+    position: absolute;
+    top: 27px;
+    width: 150px;
+    background: #fff;
+    display: none;
+    margin: -25px 0px 0px 140px;
+    padding: 10px 0px 10px 10px;
+    list-style: none;
+    border-radius: 3px;
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+#ddmenu ul li li {
+    display: block;
+    width: 100%;
+    font-size: 0.9em;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+#ddmenu ul li li a {
+    display: block;
+    width: 80%;
+    padding: 5px;
+    line-height: 1.4em;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+/*********************************** Стили для выпадающего меню ******************************************/
