@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 22 2014 г., 16:21
+-- Время создания: Дек 25 2014 г., 15:10
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `mainmenu` (
   `id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `page` char(15) NOT NULL,
-  `child` tinyint(4) DEFAULT NULL,
-  `controller` char(20) NOT NULL,
+  `parent_id` tinyint(4) NOT NULL DEFAULT '0',
+  `controller` char(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
@@ -38,13 +38,13 @@ CREATE TABLE IF NOT EXISTS `mainmenu` (
 -- Дамп данных таблицы `mainmenu`
 --
 
-INSERT INTO `mainmenu` (`id`, `page`, `child`, `controller`) VALUES
-(1, 'Главная', NULL, ''),
-(2, 'О нас', 1, ''),
-(3, 'Контакты', 4, ''),
-(4, 'Портфолио', NULL, ''),
-(5, 'User1', NULL, ''),
-(6, 'User2', 1, '');
+INSERT INTO `mainmenu` (`id`, `page`, `parent_id`, `controller`) VALUES
+(1, 'Главная', 0, 'index'),
+(2, 'О нас', 0, 'index'),
+(3, 'Контакты', 2, 'contact'),
+(4, 'Портфолио', 5, 'list'),
+(5, 'User1', 1, 'index'),
+(6, 'User2', 1, 'index');
 
 -- --------------------------------------------------------
 
@@ -55,6 +55,11 @@ INSERT INTO `mainmenu` (`id`, `page`, `child`, `controller`) VALUES
 CREATE TABLE IF NOT EXISTS `user` (
   `id` tinyint(4) NOT NULL AUTO_INCREMENT,
   `name` char(30) NOT NULL,
+  `pass` int(10) NOT NULL DEFAULT '0',
+  `mail` char(20) NOT NULL,
+  `tel` int(10) NOT NULL DEFAULT '0',
+  `status` char(10) NOT NULL DEFAULT 'user',
+  `role` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -62,9 +67,9 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Дамп данных таблицы `user`
 --
 
-INSERT INTO `user` (`id`, `name`) VALUES
-(1, 'User1'),
-(2, 'User2');
+INSERT INTO `user` (`id`, `name`, `pass`, `mail`, `tel`, `status`, `role`) VALUES
+(1, 'admin', 111111, '', 0, 'admin', 5),
+(2, 'User2', 0, '', 0, 'user', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
