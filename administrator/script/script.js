@@ -36,7 +36,7 @@ function checkUser(){
         jQuery.ajax({
             type: "POST", // HTTP метод  POST
             //url: "lib/lib.php", //url-адрес, по которому будет отправлен запрос
-            url: "admin/index", //url-адрес, по которому будет отправлен запрос
+            url: "admin/ajax", //url-адрес, по которому будет отправлен запрос
             dataType:"text", // Тип данных,  которые пришлет сервер в ответ на запрос ,например, HTML, json
             data:myData, //данные, которые будут отправлены на сервер (post переменные)
             success:function(response){
