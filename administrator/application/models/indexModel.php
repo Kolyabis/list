@@ -2,12 +2,12 @@
 class IndexModel{
     public function listGo($file,$params = null){
         $db = Db::getInstance();
-        //var_dump($db);
-        $lib = new lib($db);
-        $lib->checkUser($log = null, $pass = null, $db);
+        $lib = new lib();
+        if(isset($_POST)){
+            $lib->checkUser($_POST['login'], $_POST['pass'], $db);
+        }
         /*$menu = new mod_menu();
-        $mainMenu = $menu->get_menu($db);
-        $params['mainMenu'] = $mainMenu;*/
+        $mainMenu = $menu->get_menu($db);*/
         $lib->checkArray($params);
         ob_start();
         include(__DIR__.'/'.$file);
