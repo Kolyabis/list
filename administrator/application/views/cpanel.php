@@ -19,17 +19,23 @@
         </div>
     </div>
     <div class="bodyInfo">
-        <div>
+        <div style="float: right;">
             <?php foreach($params['last_modifay_table'] as $key => $val){; ?>
                 <div id="tab_name">
-                    <a href="/administrator/<?php echo $key; ?>"><?php echo lib::lan($key); ?></a>
+                    Последние изминения в таблице:
+                    <?php echo $key; ?>
+                    <div style="float: right; margin-left: 25px">
+                        <?php
+                        echo $val['data']
+                        ?>
+                    </div>
                 </div>
             <?php }; ?>
         </div>
-    </div>
     <pre>
         <?php //print_r($params);  ?>
     </pre>
+    <div class="clear"></div>
     <div id="error" style="display: none;"></div>
 </body>
 </html>
