@@ -20,12 +20,15 @@
     </div>
     <div class="bodyInfo">
         <div>
-            <?php echo 'Info'; ?>
+            <?php foreach($params['last_modifay_table'] as $key => $val){; ?>
+                <div id="tab_name">
+                    <a href="/administrator/<?php echo $key; ?>"><?php echo lib::lan($key); ?></a>
+                </div>
+            <?php }; ?>
         </div>
     </div>
     <pre>
-        <?php print_r($params); ?>
-        <?php print_r($_SESSION); ?>
+        <?php //print_r($params);  ?>
     </pre>
     <div id="error" style="display: none;"></div>
 </body>
