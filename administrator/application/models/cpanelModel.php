@@ -5,7 +5,7 @@ class CpanelModel{
         $lib = new lib();
         $lib->get_session();
         $params['login'] = $lib->get_user($params['token'], $db);
-        $params['last_modifay'] = $lib->info_modifay($db);
+        $params['last_modifay_table'] = $lib->get_table($db);
         /* Присоединяю массив меню панели */
         $params['menuPanel'] = $lib->menuPanel();;
         $lib->checkArray($params);
