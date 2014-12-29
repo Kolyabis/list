@@ -4,10 +4,12 @@
 body {
     margin: 0px 0 0;
     background: #fff;
+    /*font-family: 'Poiret One', cursive;
+    font-family: 'Bad Script', cursive;
+    font-family: 'Jura', sans-serif;*/
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: normal;
-
-    font-size: 15px;
+    font-size: 18px;
     text-transform: none;
     text-decoration: none;
     letter-spacing: 0em;

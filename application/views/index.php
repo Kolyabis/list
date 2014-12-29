@@ -5,6 +5,7 @@
     <title>Title</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Bad+Script|Jura|Open+Sans+Condensed:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/script/script.js"></script>

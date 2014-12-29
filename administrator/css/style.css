@@ -3,72 +3,21 @@
 }
 body {
     margin: 0px 0 0;
-    background: #fff;
+    background: #3B5998;
+    /*font-family: 'Poiret One', cursive;
+    font-family: 'Bad Script', cursive;
+    font-family: 'Jura', sans-serif;*/
     font-family: 'Open Sans Condensed', sans-serif;
     font-style: normal;
-    font-size: 15px;
+    font-size: 18px;
     text-transform: none;
     text-decoration: none;
     letter-spacing: 0em;
     word-spacing: 0em;
     line-height: 1.4;
 }
-.bodyForm{
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    box-shadow: 0 0 20px #000000;
-    border-radius: 4px;
-}
-#formCp{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-}
-#cpanel{
-    width: 310px;
-    height: 90px;
-    background:url(/images/logo.png) no-repeat top, left;
-    display: block;
-    margin-bottom: 10px;
-    background-size: 200px 80px, auto;
-}
-#buttonCp{
-    margin-top: 10px;
-    color: #ffffff;
-    background: #9F0002;
-    padding: 5px 20px 5px 20px;
-    border-radius: 3px;
-    border: 1px solid #787878;
-    box-shadow: 0 0 10px #787878;
-}
-#buttonCp:hover{
-    margin-top: 10px;
-    color: #9F0002;
-    background: #b1b1b1;
-    padding: 5px 20px 5px 20px;
-    border-radius: 3px;
-    box-shadow: 0 0 10px #9F0002;
-}
-p{
-    font-size: 18px;
-    letter-spacing: 0em;
-    word-spacing: 0em;
-    line-height: 1.4;
-
-}
-#logo{
-    width: 310px;
-    height: 130px;
-    background:url(/images/logo.png) no-repeat top, left;
-    display: block;
-    margin: 20px 0px 0px 0px;
-    float: left;
-}
 #topBar{
-    height: 30px;
+    height: 60px;
     display: block;
     margin: 0px 0px 20px 0px;
     background-color: #9F0002;
@@ -82,6 +31,122 @@ p{
     text-align: center;
     font-style: italic;
 }
+.bodyForm{
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    box-shadow: 0 0 20px #000000;
+    border-radius: 4px;
+    background: #ffffff;
+    margin-top: 10%;
+}
+#formCp{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+#cpanelLogo{
+    width: 310px;
+    height: 90px;
+    background:url(/administrator/images/logo.png) no-repeat top, left;
+    display: block;
+    margin-bottom: 10px;
+    background-size: 200px 80px, auto;
+}
+#exit{
+    width: 26px;
+    height: 26px;
+    background:url(/administrator/images/shutdown.png) no-repeat top, left;
+    float: right;
+    background-size: 20px 20px, auto;
+    margin: 20px 24px 24px 10px;
+
+}
+#divMenu{
+    width: 600px;
+    display: table-cell;
+    vertical-align: bottom;
+    height: 45px;
+    padding-left: 20px;
+}
+#menu{
+     color: #ffffff;
+     border-bottom: 1px solid #ffffff;
+     padding: 2px 5px 2px 5px;
+     text-decoration: none;
+     float: left;
+     text-align: center;
+     margin-right: 8px;
+     border-radius: 2px;
+     font-weight: 500;
+ }
+#menu:hover{
+    color: #9F0002;
+    border-bottom: 1px solid #9F0002;
+    background: #ffffff;
+    padding: 1px 5px 1px 5px;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+#loginUser{
+    color: #ffffff;
+    float: right;
+    margin: 14px 0px 14px 24px;
+    border-bottom: 1px solid #ffffff;
+}
+.bodyInfo{
+    background: #ffffff;
+    padding: 5px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+    border: 1px solid #787878;
+}
+
+
+
+
+#buttonCp{
+    margin-top: 10px;
+    color: #b1b1b1;
+    background: #9F0002;
+    padding: 5px 20px 5px 20px;
+    border-radius: 3px;
+    border: 1px solid #787878;
+    font-weight: 600;
+}
+#buttonCp:hover{
+    margin-top: 10px;
+    color: #9F0002;
+    background: #b1b1b1;
+    padding: 5px 20px 5px 20px;
+    border-radius: 3px;
+    border: 1px solid #9F0002;
+    font-weight: 600;
+}
+p{
+    font-size: 18px;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.4;
+
+}
+#logo{
+
+    height: 130px;
+    background:url(/images/logo.png) no-repeat top, left;
+    display: block;
+    margin: 20px 0px 0px 0px;
+    float: left;
+}
+
 
 
 
@@ -95,12 +160,7 @@ p{
     margin-left: auto;
     margin-right: auto;
 }
-.menu{
-    /*color: #BFBFBF;
-    border-bottom: 3px solid #BFBFBF;
-    margin-right: 8px;*/
-    text-decoration: none;
-}
+
 .menu:hover{
     /*color: #9F0002;
     border-bottom: 3px solid #9F0002;

@@ -36,24 +36,21 @@ function checkUser(){
         jQuery.ajax({
             type: "POST", // HTTP метод  POST
             //url: "lib/lib.php", //url-адрес, по которому будет отправлен запрос
-            url: "admin/ajax", //url-адрес, по которому будет отправлен запрос
+            url: "ajax/index", //url-адрес, по которому будет отправлен запрос
             dataType:"text", // Тип данных,  которые пришлет сервер в ответ на запрос ,например, HTML, json
             data:myData, //данные, которые будут отправлены на сервер (post переменные)
             success:function(response){
                 if(response === ''){
-                   alert('Pusto');
-                   /* $("#error").slideDown(function(){
+                   $("#error").slideDown(function(){
                         $("#error").html('Пользователь не найден!');
-                    });*/
+                    });
                 }else if(response != ''){
-                    $("#error").html('Пользователь не найден!');
-                    alert(response);
                     /*var login = $("#login").val();
                     login = encodeURIComponent(login);
                     var pass = $("#pass").val();
-                    pass = encodeURIComponent(pass);
-                    var url = location.href;*/
-                    //window.location.href = url+response+'.php?name='+login+'&pass='+pass;
+                    pass = encodeURIComponent(pass);*/
+                    var url = location.href;
+                    window.location.href = url+'cpanel/index/token/'+response;
                 }
             },
             error:function (xhr, ajaxOptions, thrownError){

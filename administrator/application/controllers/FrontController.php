@@ -10,15 +10,17 @@ class FrontController{
     private function __construct(){
         $request = $_SERVER['REQUEST_URI'];
         $splits = explode('/',trim($request,'/'));
+        $splits = array_splice($splits, 1);
         //Выбор контроллера
-        $this->_controller = !empty($splits[1])?ucfirst($splits[1]).'Controller':'AdminController';
+        $this->_controller = !empty($splits[0])?ucfirst($splits[0]).'Controller':'AdminController';
         //Выбор экшена
-        $this->_action = !empty($splits[2])?$splits[2].'Action':'indexAction';
+        $this->_action = !empty($splits[1])?$splits[1].'Action':'indexAction';
         //Выбор параметров
-        if(!empty($splits[3])){
+        if(!empty($splits[2])){
             $keys = array();
             $values = array();
-            for($i=2,$cnt=count($splits); $i<$cnt; $i++){
+            $cnt = count($splits);
+            for($i=2; $i<$cnt; $i++){
                 if($i%2==0)
                     $keys[] = $splits[$i];
                 else

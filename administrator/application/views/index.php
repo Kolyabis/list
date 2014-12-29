@@ -3,15 +3,15 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>CPanel</title>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One|Bad+Script|Jura|Open+Sans+Condensed:300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href="/administrator/css/style.css" rel="stylesheet" type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="/administrator/script/script.js"></script>
 </head>
 <body>
-    <div id="topBar"></div>
     <div class="bodyForm">
         <div id="formCp">
-            <p id="cpanel"></p>
+            <p id="cpanelLogo"></p>
             <div>
                 <input id="login" placeholder="Login" name="login" type="text" size="20"/>
             </div>
