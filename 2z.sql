@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 28 2014 г., 22:26
+-- Время создания: Дек 29 2014 г., 15:17
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -54,6 +54,7 @@ CREATE TABLE IF NOT EXISTS `mainmenu` (
   `page` char(15) NOT NULL,
   `parent_id` tinyint(4) NOT NULL DEFAULT '0',
   `controller` char(10) NOT NULL,
+  `data` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
@@ -61,13 +62,13 @@ CREATE TABLE IF NOT EXISTS `mainmenu` (
 -- Дамп данных таблицы `mainmenu`
 --
 
-INSERT INTO `mainmenu` (`id`, `page`, `parent_id`, `controller`) VALUES
-(1, 'Главная', 0, 'index'),
-(2, 'О нас', 0, 'index'),
-(3, 'Контакты', 2, 'contact'),
-(4, 'Портфолио', 5, 'list'),
-(5, 'User1', 1, 'index'),
-(6, 'User2', 1, 'index');
+INSERT INTO `mainmenu` (`id`, `page`, `parent_id`, `controller`, `data`) VALUES
+(1, 'Главная', 0, 'index', '2014-12-17 00:00:00'),
+(2, 'О нас', 0, 'index', '2014-12-18 00:00:00'),
+(3, 'Контакты', 2, 'contact', '2014-12-19 00:00:00'),
+(4, 'Портфолио', 5, 'list', '2014-12-20 00:00:00'),
+(5, 'User1', 1, 'index', '2014-12-21 00:00:00'),
+(6, 'User2', 1, 'index', '2014-12-22 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -84,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `status` char(10) NOT NULL DEFAULT 'user',
   `role` int(1) NOT NULL DEFAULT '0',
   `token` char(50) NOT NULL,
+  `data` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -91,9 +93,9 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Дамп данных таблицы `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `pass`, `mail`, `tel`, `status`, `role`, `token`) VALUES
-(1, 'admin', '111111', '', '0', 'admin', 5, 'cdd0500dc0ef6682fa6ec6d2e6b577c4'),
-(2, 'User2', '0', '', '0', 'user', 0, 'cdd0500dc0ef6682fa6ec6d2e6b58892');
+INSERT INTO `user` (`id`, `name`, `pass`, `mail`, `tel`, `status`, `role`, `token`, `data`) VALUES
+(1, 'admin', '111111', '', '0', 'admin', 5, 'cdd0500dc0ef6682fa6ec6d2e6b577c4', '2014-12-29 00:00:00'),
+(2, 'User2', '0', '', '0', 'user', 0, 'cdd0500dc0ef6682fa6ec6d2e6b58892', '2014-12-26 00:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
