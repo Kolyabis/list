@@ -9,8 +9,8 @@ class CpanelModel{
         /* Присоединяю массив меню панели */
         $params['menuPanel'] = $lib->menuPanel();;
         $lib->checkArray($params);
-        ob_start();
+        //ob_start();
         include(__DIR__.'/'.$file);
-        return ob_get_clean();
+        //return ob_get_clean();
     }
 }
