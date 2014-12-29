@@ -5,6 +5,7 @@ set_include_path(get_include_path()
     .PATH_SEPARATOR.'application/controllers'
     .PATH_SEPARATOR.'application/models'
     .PATH_SEPARATOR.'application/views'
+    .PATH_SEPARATOR.'application/lang'
     .PATH_SEPARATOR.'lib');
 function init($class){
     require $class.'.php';
@@ -31,7 +32,7 @@ class Db {
                 echo $error->getLine().'<br>';
             }
         }
-        print_r(self::$_instance);
+        //print_r(self::$_instance);
     }
     protected function __construct(){}
     protected function __clone(){}
