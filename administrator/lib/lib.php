@@ -42,20 +42,25 @@ class lib{
             header("Location: http://list/administrator/");
         }
     }
-    /********************** Метод вывода информации или последние изминения в таблицах ***************/
-    public function info_modifay($db){
-        $info = array();
-        $infoCat = $db->query("SELECT id, `name`, data FROM category ORDER BY data DESC, data DESC LIMIT 0, 1");
-        $res_infoCat = $infoCat->fetchAll(PDO::FETCH_ASSOC);
-        if($res_infoCat){
-            $info['category'] = $res_infoCat[0];
-            return $info;
+    /******************* Получаем имена всех таблиц в базе и последнии изминения в них по дате**************************/
+    public function get_table($db){
+        $last_modifay = array();
+        $list_db = $db->query("SHOW TABLES FROM 2z");
+        $res_db = $list_db->fetchAll(PDO::FETCH_ASSOC);
+        if(!$res_db){
+            exit('Проблема подключения к базе!');
         }else{
-            return false;
+            $cnt = count($res_db);
+            for($i = 0; $i < $cnt; $i++){
+                $list = $db->query("SELECT * FROM ".$res_db[$i]['Tables_in_2z']." ORDER BY data DESC, data DESC LIMIT 0, 1");
+                $tab_db = $list->fetchAll(PDO::FETCH_ASSOC);
+                $last_modifay[$res_db[$i]['Tables_in_2z']] = $tab_db[0];
+            }
         }
+        return $last_modifay;
     }
     /****************************** Метод формирования массива для меню панели ***********************/
-    public function menuPanel(){
+    public static  function menuPanel(){
         $menu = array(
                       'category'=>'Категории',
                       'articles'=>'Материалы',
@@ -63,5 +68,14 @@ class lib{
                       'media'=>'Медиа менеджер'
                     );
         return $menu;
+    }
+    /************************************* Метод перевода на Русский **********************************/
+    public function lan($translation){
+        $filename = 'application/lang/langueg.php';
+        if(file_exists($filename)){
+            include_once($filename);
+            $return = $$translation;
+            return $return;
+        }
     }
 }
