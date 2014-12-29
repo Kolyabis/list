@@ -23,10 +23,10 @@
             <?php foreach($params['last_modifay_table'] as $key => $val){; ?>
                 <div id="tab_name">
                     Последние изминения в таблице:
-                    <?php echo $key; ?>
+                    <?php echo lib::lan($key); ?>
                     <div style="float: right; margin-left: 25px">
                         <?php
-                        echo $val['data']
+                            echo $val['data']
                         ?>
                     </div>
                 </div>
