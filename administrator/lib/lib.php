@@ -70,7 +70,7 @@ class lib{
         return $menu;
     }
     /************************************* Метод перевода на Русский **********************************/
-    public function lan($translation){
+    public static function lan($translation){
         $filename = 'application/lang/langueg.php';
         if(file_exists($filename)){
             include_once($filename);
