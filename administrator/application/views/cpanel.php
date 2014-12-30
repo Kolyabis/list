@@ -20,22 +20,31 @@
     </div>
     <div class="bodyInfo">
         <div style="float: right;">
-            <?php foreach($params['last_modifay_table'] as $key => $val){; ?>
-                <div id="tab_name">
-                    Последние изминения в таблице:
-                    <?php echo lib::lan($key); ?>
-                    <div style="float: right; margin-left: 25px">
-                        <?php
-                            echo $val['data']
-                        ?>
+            <div class="info">
+                <?php
+                    $modify = $params['last_modifay_table'];
+                    $cnt = count($modify);
+                    foreach($modify as $key => $val){; ?>
+                    <div class="tab_name" id="tab_name<?php echo '-'.$key; ?>">
+                        Последние изминения в базе:
+                        <?php echo lib::lan($key); ?>
+                        <div style="float: right; margin-left: 15px">
+                            <?php echo $val['data'] ?>
+                        </div>
+                        <div class="show"  style="display: none;">
+                            <?php foreach($val as $k => $v ){; ?>
+                                <div style="margin-bottom: 2px;">
+                                    <?php print_r(lib::lan($k)." - ".$v); ?>
+                                </div>
+                            <?php }; ?>
+                        </div>
                     </div>
-                </div>
-            <?php }; ?>
+                <?php }; ?>
+            </div>
         </div>
-    <pre>
-        <?php //print_r($params);  ?>
-    </pre>
+
     <div class="clear"></div>
     <div id="error" style="display: none;"></div>
+    <div style="float: right; margin-left: 25px"></div>
 </body>
 </html>
