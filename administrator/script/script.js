@@ -11,15 +11,16 @@ $(document).ready(function(){
                 $('ul',this).stop(true,true).slideUp(200);
             }, this), 100));
         });
-});
-$(document).ready(function(){
+
     $('.tab_name').click(function() {
         var a_id = this.id;
-        $('#'+ a_id +' .show').slideDown(function(a_id){
-            $('.tab_name').on({click: function(a_id){
-                    $('#'+ a_id +' .show').slideUp();
-            }});
-        });
+        var current_block = $('.show', $(this));
+        
+        // first step: slideUp all slides exept current
+        $('.show').not(current_block).slideUp();
+        
+        // second step: slideDown current
+        current_block.slideDown();
     });
 });
 /*************************************************************************/
