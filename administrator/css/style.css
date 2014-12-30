@@ -109,8 +109,35 @@ body {
     border-radius: 3px;
     border: 1px solid #787878;
 }
-
-
+.tab_name{
+    padding: 1px 10px 1px 10px;
+    border: 1px solid #787878;
+    margin-bottom: 2px;
+    border-radius: 2px;
+}
+.tab_name:hover {
+    padding: 1px 10px 1px 10px;
+    border: 1px solid #787878;
+    margin-bottom: 2px;
+    box-shadow:1px 1px 1px rgba(0,0,0,0.75); /* Тень текста, чтобы приподнять его на немного */
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    background: #e5e5e5;
+}
+.show{
+    display: block;
+    width: 380px;
+    max-height: 500px;
+    padding: 1px 10px 1px 10px;
+    border: 1px solid #787878;
+    margin-bottom: 2px;
+    box-shadow:1px 1px 1px rgba(0,0,0,0.75); /* Тень текста, чтобы приподнять его на немного */
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    background: #e5e5e5;
+}
 
 
 #buttonCp{
