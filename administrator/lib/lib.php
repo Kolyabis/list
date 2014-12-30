@@ -73,7 +73,7 @@ class lib{
     public static function lan($translation){
         $filename = 'application/lang/langueg.php';
         if(file_exists($filename)){
-            include_once($filename);
+            include($filename);
             $return = $$translation;
             return $return;
         }
