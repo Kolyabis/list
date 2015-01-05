@@ -20,6 +20,13 @@ $(document).ready(function(){
         // second step: slideDown current
         current_block.slideDown();
     });
+
+
+
+    $('.close-icon', $(this)).click(function(){
+        var id_remove = $(this);
+
+    });
 });
 /*************************************************************************/
 /************************* Проверка юзера ********************************/
