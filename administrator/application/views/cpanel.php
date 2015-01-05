@@ -14,7 +14,10 @@
         <div id="loginUser">Вы: <?php echo $params['login']; ?></div>
         <div id="divMenu">
             <?php foreach($params['menuPanel'] as $key => $val){;?>
-                <a id="menu" href="/administrator/<?php echo $key; ?>"><?php echo $val; ?></a>
+            <div style="float: left; margin-right: 8px;">
+                <img id="menuImg" src="/images/icon/<?php echo $key; ?>.png" alt=""/><br />
+                <a id="menu" href="/administrator/<?php echo $key; ?>/index/token/<?php echo $params['token']; ?>"><?php echo $val; ?></a>
+            </div>
             <?php } ?>
         </div>
     </div>
@@ -42,9 +45,11 @@
                 <?php }; ?>
             </div>
         </div>
-
     <div class="clear"></div>
     <div id="error" style="display: none;"></div>
     <div style="float: right; margin-left: 25px"></div>
 </body>
+<pre>
+        <?php print_r($params); ?>
+    </pre>
 </html>
