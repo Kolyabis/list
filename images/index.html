@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+*					{ margin: 0; padding: 0; }
+body				{ font: 16px Georgia, serif; }
+a                   { text-decoration: none; }
+ul                  { list-style: none; }
+#page-wrap		    { width: 500px; margin: 0 auto; }
+
+#project-list {
+    background:transparent url(images/graypixel.png) repeat-y scroll 15px 0;
+    width:340px;
+}
+
+#project-list li {
+    font-size:16px;
+    margin:15px 0 20px;
+    padding:0 0 0 10px;
+}
+
+#project-list li a {
+    background:white none repeat scroll 0 0;
+    color:#1F6DD9;
+    display:block;
+    padding:3px;
+}
+
+#project-list li a:hover {
+    color:#84B8FF;
+}
+
+#project-list li ul li {
+    background:transparent url(images/graypixel.png) repeat-x scroll 0 8px;
+    font-size:13px;
+    margin:4px 0 4px 5px;
+    padding:0 0 0 20px;
+}
+
+#project-list li ul li a {
+    padding:0 0 0 3px;
+}
+
+#project-list li ul li ul {
+    background:transparent url(images/graypixel.png) repeat-y scroll 15px 0;
+    margin-bottom:10px;
+}
+
+#project-list li ul li ul li {
+    margin-left:16px;
+    padding-left:10px;
+}
+</style>
+</head>
+
+<body>
+<ul id="project-list">
+            <li><a href="#">Civil Engineering</a>
+
+                <ul>
+                    <li><a href="#">Cowley Hall Parking Lot Recontruction</a></li>
+                    <li><a href="#">Culver’s Home Office</a></li>
+                    <li><a href="#">First Addition to Highland Addition</a></li>
+                    <li><a href="#">Fox Point Apartments</a>
+                        <ul>
+                            <li><a href="#">East Side</a></li>
+
+                            <li><a href="#">West Side</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Metropolitan Place Phase II</a></li>
+                    <li><a href="#">Oak Park Place of Baraboo</a></li>
+                    <li><a href="#">Premier Coop</a></li>
+                    <li><a href="#">Sleep Inn & Suites</a></li>
+
+                    <li><a href="#">Tradewinds Business Center</a></li>
+                    <li><a href="#">UW-Madison Nielsen Tennis Stadium</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Environmental Engineering</a></li>
+            <li><a href="#">Telecommunications Engineering</a>
+                <ul>
+
+                    <li><a href="#">Nsight TeleServices (CellCom) Wisconsin</a></li>
+                    <li><a href="#">Oakland County/Radian Communications Michigan</a></li>
+                    <li><a href="#">T-Mobile Site Deployment</a></li>
+                    <li><a href="#">U.S. Cellular Network Development</a></li>
+                    <li><a href="#">Western Wireless South Dakota</a></li>
+                </ul>
+
+            </li>
+        </ul>
+
+</body>
+</html>
