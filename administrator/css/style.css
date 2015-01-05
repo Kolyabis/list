@@ -17,7 +17,7 @@ body {
     line-height: 1.4;
 }
 #topBar{
-    height: 60px;
+    height: 75px;
     display: block;
     margin: 0px 0px 20px 0px;
     background-color: #9F0002;
@@ -61,43 +61,55 @@ body {
     background:url(/administrator/images/shutdown.png) no-repeat top, left;
     float: right;
     background-size: 20px 20px, auto;
-    margin: 20px 24px 24px 10px;
+    margin: 25px 24px 24px 10px;
 
 }
 #divMenu{
     width: 600px;
     display: table-cell;
     vertical-align: bottom;
-    height: 45px;
+    height: 65px;
     padding-left: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 #menu{
      color: #ffffff;
-     border-bottom: 1px solid #ffffff;
+     /*border-bottom: 1px solid #ffffff;*/
      padding: 2px 5px 2px 5px;
      text-decoration: none;
-     float: left;
-     text-align: center;
-     margin-right: 8px;
+     /*float: left;*/
+    text-align: center;
      border-radius: 2px;
-     font-weight: 500;
+     font-weight: 400;
  }
 #menu:hover{
-    color: #9F0002;
-    border-bottom: 1px solid #9F0002;
-    background: #ffffff;
+    color: #ffffff;
+    /*color: #9F0002;*/
+    border-bottom: 1px solid #ffffff;
+    /*background: #ffffff;*/
     padding: 1px 5px 1px 5px;
     text-decoration: none;
-    float: left;
-    text-align: center;
-    margin-right: 8px;
+    /*float: left;*/
+
+
     border-radius: 2px;
     font-weight: 500;
+}
+#menuImg{
+    width: 40px;
+    margin-bottom: -5px;
+    display:inline-block;
+    vertical-align:middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 #loginUser{
     color: #ffffff;
     float: right;
-    margin: 14px 0px 14px 24px;
+    margin: 20px 0px 14px 24px;
     border-bottom: 1px solid #ffffff;
 }
 .bodyInfo{
