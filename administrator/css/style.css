@@ -1,6 +1,7 @@
 .clear{
     clear:both;
 }
+
 body {
     margin: 0px 0 0;
     background: #3B5998;
@@ -209,15 +210,7 @@ p{
 #logoMenu{
     margin-bottom: 5px;
 }
-#footer,span{
-    max-width: 1000px;
-    width: 1000px;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-    background-color: #3B5998;
-}
+
 .topModule{
     max-width: 800px;
     width: 800px;
@@ -301,7 +294,62 @@ p{
     position:relative; left:5px; top:90px;
 }
 /***********************************************************************************************************************/
+*          { margin: 0; padding: 0; }
+a          { text-decoration: none; }
+ul                  { list-style: none; }
+#page-wrap		    { width: 500px; margin: 0 auto; }
+#project-list {
+    background:transparent url(/images/icon/graypixel.png) repeat-y scroll 15px 0;
+    width: 97%;
+}
+#project-list li {
+    font-size:18px;
+    margin:15px 0 20px;
+    padding:0 0 0 10px;
+}
+#project-list li a {
+    background: rgb(232, 232, 232) none repeat scroll 0 0;
+    color:#1F6DD9;
+    display:block;
+    border: 1px solid #787878;
+    padding:3px;
 
+}
+#project-list li a:hover {
+    color:#9F0002;
+}
+#project-list li ul li {
+    background:transparent url(/images/icon/graypixel.png) repeat-x scroll 0 8px;
+    font-size:18px;
+    margin:4px 0 4px 5px;
+    padding:0 0 0 20px;
+}
+#project-list li ul li a {
+    padding:0 0 0 3px;
+}
+#project-list li ul li ul {
+    background:transparent url(/images/icon/graypixel.png) repeat-y scroll 15px 0;
+    margin-bottom:10px;
+}
+#project-list li ul li ul li {
+    margin-left:16px;
+    padding-left:10px;
+}
+.disabled_link {
+    color: #999; /* цвет текста для нективной ссылки */
+    padding-right: 15px;
+}
+/***********************************************************************************************************************/
+.close-icon{
+    width: 23px;
+    height: 23px;
+    background: url(/images/icon/close-icon.png) no-repeat top;
+    float: right;
+    background-size: 23px 23px, auto;
+    padding-left: 15px;
+    margin:-28px -40px 0px 0px;
+    cursor: pointer;
+}
 
 
 
@@ -366,115 +414,117 @@ p{
 }
 
 /*********************************** Стили для выпадающего меню ******************************************/
-#ddmenu {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    cursor: pointer;
-    outline: none;
-    color: #8aa8bd;
-}
+/*#ddcat {*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*margin: 0 auto;*/
+    /*cursor: pointer;*/
+    /*outline: none;*/
+    /*color: #8aa8bd;*/
+    /*text-decoration: none;*/
 
-#ddmenu li { display: block; position: relative; float: left; color: #BFBFBF;}
+/*}*/
 
-#ddmenu li a {
-    display: block;
-    float: left;
-    padding: 0 12px;
-    text-decoration: none;
-    color: #BFBFBF;
-    border-bottom: 2px solid #BFBFBF;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-}
-#ddmenu li:hover > a { color: #9F0002; border-bottom: 2px solid #9F0002;}
+/*#ddcat li { display: block; position: relative; float: left; color: #BFBFBF;}*/
 
-#ddmenu ul {
-    position: absolute;
-    top: 27px;
-    width: 150px;
-    background: #fff;
-    display: none;
-    margin: 0;
-    padding: 10px 0px 10px 10px;
-    list-style: none;
-    border-radius: 1px;
+/*#ddmenu li a {*/
+    /*display: block;*/
+    /*float: left;*/
+    /*padding: 0 12px;*/
+    /*text-decoration: none;*/
+    /*color: #BFBFBF;*/
+    /*border-bottom: 2px solid #BFBFBF;*/
+    /*-webkit-transition: all 0.2s linear;*/
+    /*-moz-transition: all 0.2s linear;*/
+    /*-o-transition: all 0.2s linear;*/
+    /*transition: all 0.2s linear;*/
+/*}*/
+/*#ddmenu li:hover > a { color: #9F0002; border-bottom: 2px solid #9F0002;}*/
+
+/*#ddmenu ul {*/
+    /*position: absolute;*/
+    /*top: 27px;*/
+    /*width: 150px;*/
+    /*background: #fff;*/
+    /*display: none;*/
+    /*margin: 0;*/
+    /*padding: 10px 0px 10px 10px;*/
+    /*list-style: none;*/
+    /*border-radius: 1px;*/
     /*border: 1px solid rgba(0, 0, 0, 0.2);*/
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+/*}*/
 
-/* strela #ddmenu ul:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom: 100%;
-    left: 8px;
-    border-width: 0 8px 8px 8px;
-    border-style: solid;
-    border-color: #fff transparent;
-}
+/* strela #ddmenu ul:after {*/
+    /*content: "";*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*position: absolute;*/
+    /*bottom: 100%;*/
+    /*left: 8px;*/
+    /*border-width: 0 8px 8px 8px;*/
+    /*border-style: solid;*/
+    /*border-color: #fff transparent;*/
+/*}*/
 
-#ddmenu ul:before {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom: 100%;
-    left: 4px;
-    border-width: 0 10px 10px 10px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.1) transparent;
+/*#ddmenu ul:before {*/
+    /*content: "";*/
+    /*width: 0;*/
+    /*height: 0;*/
+    /*position: absolute;*/
+    /*bottom: 100%;*/
+    /*left: 4px;*/
+    /*border-width: 0 10px 10px 10px;*/
+    /*border-style: solid;*/
+    /*border-color: rgba(0, 0, 0, 0.1) transparent;*/
+/*}*/
+
+
+/*#ddmenu ul li {*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*font-size: 0.9em;*/
+    /*text-shadow: 1px 1px 0 #fff;*/
+/*}*/
+
+/*#ddmenu ul li a {*/
+    /*display: block;*/
+    /*width: 80%;*/
+    /*padding: 5px;*/
+    /*line-height: 1.4em;*/
+    /*-webkit-transition: all 0.2s linear;*/
+    /*-moz-transition: all 0.2s linear;*/
+    /*-o-transition: all 0.2s linear;*/
+    /*transition: all 0.2s linear;*/
+/*}*/
+/*#ddmenu ul li ul{*/
+    /*position: absolute;*/
+    /*top: 27px;*/
+    /*width: 150px;*/
+    /*background: #fff;*/
+    /*display: none;*/
+    /*margin: -25px 0px 0px 140px;*/
+    /*padding: 10px 0px 10px 10px;*/
+    /*list-style: none;*/
+    /*border-radius: 3px;*/
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);*/
+/*}*/
+/*#ddmenu ul li li {*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*font-size: 0.9em;*/
+    /*text-shadow: 1px 1px 0 #fff;*/
+/*}*/
+
+/*#ddmenu ul li li a {*/
+    /*display: block;*/
+    /*width: 80%;*/
+    /*padding: 5px;*/
+    /*line-height: 1.4em;*/
+    /*-webkit-transition: all 0.2s linear;*/
+    /*-moz-transition: all 0.2s linear;*/
+    /*-o-transition: all 0.2s linear;*/
+    /*transition: all 0.2s linear;
 }*/
-
-
-#ddmenu ul li {
-    display: block;
-    width: 100%;
-    font-size: 0.9em;
-    text-shadow: 1px 1px 0 #fff;
-}
-
-#ddmenu ul li a {
-    display: block;
-    width: 80%;
-    padding: 5px;
-    line-height: 1.4em;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-}
-#ddmenu ul li ul{
-    position: absolute;
-    top: 27px;
-    width: 150px;
-    background: #fff;
-    display: none;
-    margin: -25px 0px 0px 140px;
-    padding: 10px 0px 10px 10px;
-    list-style: none;
-    border-radius: 3px;
-    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-#ddmenu ul li li {
-    display: block;
-    width: 100%;
-    font-size: 0.9em;
-    text-shadow: 1px 1px 0 #fff;
-}
-
-#ddmenu ul li li a {
-    display: block;
-    width: 80%;
-    padding: 5px;
-    line-height: 1.4em;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-}
 /*********************************** Стили для выпадающего меню ******************************************/
