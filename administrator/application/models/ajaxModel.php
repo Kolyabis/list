@@ -7,8 +7,13 @@ class ajaxModel{
             $lib->checkUser($_POST['login'], $_POST['pass'], $db);
         }
         $lib->checkArray($params);
-        ob_start();
         include(__DIR__.'/'.$file);
-        return ob_get_clean();
+    }
+    /* Метод удаления категории в админпанели через AJAX */
+    public function del_category($file,$params = null){
+        $db = Db::getInstance();
+        $lib = new lib();
+        $lib->checkArray($params);
+        include(__DIR__.'/'.$file);
     }
 }
