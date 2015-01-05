@@ -13,6 +13,9 @@ class ajaxModel{
     public function del_category($file,$params = null){
         $db = Db::getInstance();
         $lib = new lib();
+        if(isset($_POST)){
+            echo 'post';
+        }
         $lib->checkArray($params);
         include(__DIR__.'/'.$file);
     }
