@@ -79,4 +79,30 @@ class lib{
             return $return;
         }
     }
+    /****************************** Метод вывода категорий с подкатегориями **************************/
+    public function get_list_category(){
+        $db = mysql_connect('localhost','root','');
+        if(!$db){
+            exit(mysql_error());
+        }
+        if(!mysql_select_db('2z',$db)){
+            exit(mysql_error());
+        }
+        $sql = "select * from category";
+        $result = mysql_query($sql);
+        if(!$result){
+            return null;
+        }
+        $main_category = array();
+        if(mysql_num_rows($result) != 0){
+            for($i = 0; $i < mysql_num_rows($result); $i++){
+                $row = mysql_fetch_array($result, MYSQL_ASSOC);
+                if(empty($main_category[$row['parent_id']])){
+                    $main_category[$row['parent_id']] = array();
+                }
+                $main_category[$row['parent_id']][] = $row;
+            }
+        }
+        return $main_category;
+    }
 }
