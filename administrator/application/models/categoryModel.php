@@ -6,9 +6,7 @@ class categoryModel{
         $lib->get_session();
         $params['login'] = $lib->get_user($params['token'], $db);
         $params['menuPanel'] = $lib->menuPanel();
-        $sql_category = $db->query("SELECT * FROM category");
-        $result = $sql_category->fetchAll(PDO::FETCH_ASSOC);
-        $params['category'] = $result;
+        $params['list_cat'] = $lib->get_list_category();
         $lib->checkArray($params);
         include(__DIR__.'/'.$file);
     }
