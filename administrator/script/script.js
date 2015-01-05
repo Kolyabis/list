@@ -24,8 +24,31 @@ $(document).ready(function(){
 
 
     $('.close-icon', $(this)).click(function(){
-        var id_remove = $(this);
-
+        var id_remove = $('.close-icon', $(this).attr('id'));
+console.log(id_remove);
+        jQuery.ajax({
+            type: "POST", // HTTP метод  POST
+            url: "ajax/index", //url-адрес, по которому будет отправлен запрос
+            dataType:"text", // Тип данных,  которые пришлет сервер в ответ на запрос ,например, HTML, json
+            data:id_remove, //данные, которые будут отправлены на сервер (post переменные)
+            success:function(response){
+                if(response === ''){
+                    $("#error").slideDown(function(){
+                        $("#error").html('Пользователь не найден!');
+                    });
+                }else if(response != ''){
+                    /*var login = $("#login").val();
+                     login = encodeURIComponent(login);
+                     var pass = $("#pass").val();
+                     pass = encodeURIComponent(pass);*/
+                    var url = location.href;
+                    window.location.href = url+'cpanel/index/token/'+response;
+                }
+            },
+            error:function (xhr, ajaxOptions, thrownError){
+                alert(thrownError); //выводим ошибку
+            }
+        });
     });
 });
 /*************************************************************************/
