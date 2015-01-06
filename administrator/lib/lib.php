@@ -39,7 +39,7 @@ class lib{
             return $result[0]['name'];
         }else{
             unset($_SESSION['session']);
-            header("Location: http://list/administrator/");
+            //header("Location: http://list/administrator/");
         }
     }
     /******************* Получаем имена всех таблиц в базе и последнии изминения в них по дате**************************/
@@ -105,4 +105,5 @@ class lib{
         }
         return $main_category;
     }
+    /************************************** Метод удаления категории ***********************************/
 }
