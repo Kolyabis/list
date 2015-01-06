@@ -33,7 +33,7 @@
                     }
                     echo "<ul>";
                     for($i = 0; $i < count($arr[$parent_id]) ;$i++){
-                        echo "<li>
+                        echo "<li id='".$arr[$parent_id][$i]['id']."'>
                                 <span>
                                     <a href='/administrator/category/update/token/".$token."/id/".$arr[$parent_id][$i]['id']."'>
                                         ".$arr[$parent_id][$i]['name']."
@@ -47,6 +47,7 @@
                         list_category($arr, $token, $arr[$parent_id][$i]['id']);
                         echo "</li>\n";
                     }
+                    echo "<span id='error_del' style='display: none;'></span>";
                     echo "</ul>\n";
                 }
                 list_category($params['list_cat'], $params['token']);
