@@ -10,11 +10,9 @@ class ajaxController implements IController{
     }
     public function updateAction(){}
     public function insertAction(){}
-    //public function deleteAction(){}
-
     public function deleteAction(){
         $fc = FrontController::getInstance();
-        //$params = $fc->getParams();
+        $params = $fc->getParams();
         $view = new ajaxModel();
         //$view->params = $params;
         //print_r($params);
