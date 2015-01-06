@@ -93,6 +93,7 @@ function checkUser(){
     }
 }
 /*************************************************************************/
+/******************* Функция удаления категории **************************/
 function delCat(id){
     var myData = "id="+id;
     jQuery.ajax({
@@ -115,6 +116,11 @@ function delCat(id){
         }
     });
 }
-
+/*********************** Функция добавления новой категории ******************/
+function addCat(token){
+    alert(token);
+    var url = "http://list/administrator/category/insert/token/"+token;
+    window.location.href = url;
+}
 
 

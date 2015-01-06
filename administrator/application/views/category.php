@@ -23,6 +23,12 @@
         </div>
     </div>
     <div class="bodyInfo">
+        <div id="addCat">
+            <div class="newCat">
+                <input type="button" id="new_cat" value="Добавить категорию" onclick="addCat('<?php echo $params['token']; ?>')"/>
+            </div>
+            <div class="clear"></div>
+        </div>
         <div>
             <ul id="project-list">
             <?php

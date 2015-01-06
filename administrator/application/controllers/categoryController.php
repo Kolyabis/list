@@ -9,6 +9,14 @@ class categoryController implements IController{
         $fc->setBody($result);
     }
     public function updateAction(){}
-    public function insertAction(){}
+    /* Экшен для добавления новой категории */
+    public function insertAction(){
+        $fc = FrontController::getInstance();
+        $params = $fc->getParams();
+        $view = new categoryModel();
+        $view->params = $params;
+        $result = $view->set_newCategory('../views/categoryAdd.php', $params);
+        $fc->setBody($result);
+    }
     public function deleteAction(){}
 }

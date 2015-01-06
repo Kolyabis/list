@@ -32,6 +32,15 @@ body {
     text-align: center;
     font-style: italic;
 }
+#error-del{
+    background: #c48283;
+    border: 1px solid #787878;
+    color: #ffffff;
+    padding: 6px;
+    border-radius: 4px;
+    text-align: center;
+    font-style: italic;
+}
 .bodyForm{
     max-width: 300px;
     margin-left: auto;
@@ -350,8 +359,20 @@ ul                  { list-style: none; }
     margin:-28px -40px 0px 0px;
     cursor: pointer;
 }
-
-
+#addCat{
+    max-width: 100%;
+    border: 1px solid #787878;
+    border-radius: 3px;
+    padding: 3px;
+}
+#new_cat{
+    background: #9F0002;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+}
 
 .center{
     /*height: 500px; /* можно заменить на min-height */
