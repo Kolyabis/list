@@ -33,7 +33,16 @@
                     }
                     echo "<ul>";
                     for($i = 0; $i < count($arr[$parent_id]) ;$i++){
-                        echo "<li><span><a href='/administrator/category/update/token/".$token."/id/".$arr[$parent_id][$i]['id']."'>".$arr[$parent_id][$i]['name']."<div class='disabled_link' style='float: right;'>".$arr[$parent_id][$i]['data']."</div></a><span class='close-icon' id='".$arr[$parent_id][$i]['id']."'></span></span>";
+                        echo "<li>
+                                <span>
+                                    <a href='/administrator/category/update/token/".$token."/id/".$arr[$parent_id][$i]['id']."'>
+                                        ".$arr[$parent_id][$i]['name']."
+                                            <div class='disabled_link' style='float: right;'>
+                                                ".$arr[$parent_id][$i]['data']."
+                                            </div>
+                                    </a>
+                                    <span class='close-icon' id='".$arr[$parent_id][$i]['id']."' onClick=delCat(".$arr[$parent_id][$i]['id'].")></span>
+                                </span>";
                         //echo "<span id='close-icon'></span>";
                         list_category($arr, $token, $arr[$parent_id][$i]['id']);
                         echo "</li>\n";
