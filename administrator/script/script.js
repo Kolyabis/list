@@ -20,29 +20,43 @@ $(document).ready(function(){
         // second step: slideDown current
         current_block.slideDown();
     });
-
-
-
+});
+function delCat(id){
+    var myData = "id="+id;
+    jQuery.ajax({
+        type: "POST", // HTTP метод  POST
+        url: "ajax/delete", //url-адрес, по которому будет отправлен запрос
+        dataType:"text", // Тип данных,  которые пришлет сервер в ответ на запрос ,например, HTML, json
+        data:myData, //данные, которые будут отправлены на сервер (post переменные)
+        success:function(response){
+            alert(response);
+            if(response === ''){
+                alert('PUSTO');
+            }else if(response != ''){
+                alert('NE PUSTO');
+            }
+        },
+        error:function (xhr, ajaxOptions, thrownError){
+            alert(thrownError); //выводим ошибку
+        }
+    });
+}
+/*$(document).ready(function(){
     $('.close-icon', $(this)).click(function(){
-        var id_remove = $('.close-icon', $(this).attr('id'));
-console.log(id_remove);
+        var id_remove = "id="+$('.close-icon', $(this).attr('id'));
+        alert(id_remove);
         jQuery.ajax({
             type: "POST", // HTTP метод  POST
-            url: "ajax/index", //url-адрес, по которому будет отправлен запрос
+            url: "ajax/delete", //url-адрес, по которому будет отправлен запрос
             dataType:"text", // Тип данных,  которые пришлет сервер в ответ на запрос ,например, HTML, json
             data:id_remove, //данные, которые будут отправлены на сервер (post переменные)
             success:function(response){
                 if(response === ''){
-                    $("#error").slideDown(function(){
-                        $("#error").html('Пользователь не найден!');
-                    });
+                    alert('PUSTO');
+                    alert(response);
                 }else if(response != ''){
-                    /*var login = $("#login").val();
-                     login = encodeURIComponent(login);
-                     var pass = $("#pass").val();
-                     pass = encodeURIComponent(pass);*/
-                    var url = location.href;
-                    window.location.href = url+'cpanel/index/token/'+response;
+                    alert('NE PUSTO');
+                    alert(response);
                 }
             },
             error:function (xhr, ajaxOptions, thrownError){
@@ -50,7 +64,7 @@ console.log(id_remove);
             }
         });
     });
-});
+});*/
 /*************************************************************************/
 /************************* Проверка юзера ********************************/
 function checkUser(){
