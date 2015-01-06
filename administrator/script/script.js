@@ -21,26 +21,6 @@ $(document).ready(function(){
         current_block.slideDown();
     });
 });
-function delCat(id){
-    var myData = "id="+id;
-    jQuery.ajax({
-        type: "POST", // HTTP метод  POST
-        url: "ajax/delete", //url-адрес, по которому будет отправлен запрос
-        dataType:"text", // Тип данных,  которые пришлет сервер в ответ на запрос ,например, HTML, json
-        data:myData, //данные, которые будут отправлены на сервер (post переменные)
-        success:function(response){
-            alert(response);
-            if(response === ''){
-                alert('PUSTO');
-            }else if(response != ''){
-                alert('NE PUSTO');
-            }
-        },
-        error:function (xhr, ajaxOptions, thrownError){
-            alert(thrownError); //выводим ошибку
-        }
-    });
-}
 /*$(document).ready(function(){
     $('.close-icon', $(this)).click(function(){
         var id_remove = "id="+$('.close-icon', $(this).attr('id'));
@@ -113,7 +93,28 @@ function checkUser(){
     }
 }
 /*************************************************************************/
-
+function delCat(id){
+    var myData = "id="+id;
+    jQuery.ajax({
+        type: "POST", // HTTP метод  POST
+        url: "http://list/administrator/ajax/delete/", //url-адрес, по которому будет отправлен запрос
+        dataType:"text", // Тип данных,  которые пришлет сервер в ответ на запрос ,например, HTML, json
+        data:myData, //данные, которые будут отправлены на сервер (post переменные)
+        success:function(response){
+            //alert(response);
+            if(response === ''){
+                $('#error_del').slideDown(function(){
+                    $('#error_del').html('Не получилось удалить запись!');
+                });
+            }else if(response != ''){
+                $("#"+response).slideUp();
+            }
+        },
+        error:function (xhr, ajaxOptions, thrownError){
+            alert(thrownError); //выводим ошибку
+        }
+    });
+}
 
 
 
