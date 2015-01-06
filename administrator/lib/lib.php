@@ -106,4 +106,8 @@ class lib{
         return $main_category;
     }
     /************************************** Метод удаления категории ***********************************/
+    public function del_cat($id, $db){
+        $db->query("DELETE FROM category WHERE id=$id");
+        echo $id;
+    }
 }
