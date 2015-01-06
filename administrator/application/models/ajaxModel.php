@@ -13,8 +13,8 @@ class ajaxModel{
     public function del_category($file,$params = null){
         $db = Db::getInstance();
         $lib = new lib();
-        if(isset($_POST)){
-            echo 'post';
+        if(isset($_POST['id'])){
+            print_r($_POST['id']);
         }
         $lib->checkArray($params);
         include(__DIR__.'/'.$file);
