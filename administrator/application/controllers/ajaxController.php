@@ -8,15 +8,4 @@ class ajaxController implements IController{
         $result = $view->ajax('../views/ajax.php', $params);
         $fc->setBody($result);
     }
-    public function updateAction(){}
-    public function insertAction(){}
-    public function deleteAction(){
-        $fc = FrontController::getInstance();
-        $params = $fc->getParams();
-        $view = new ajaxModel();
-        //$view->params = $params;
-        //print_r($params);
-        $result = $view->del_category('../views/ajax.php', $params);
-        $fc->setBody($result);
-    }
 }

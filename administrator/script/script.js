@@ -21,31 +21,6 @@ $(document).ready(function(){
         current_block.slideDown();
     });
 });
-/*$(document).ready(function(){
-    $('.close-icon', $(this)).click(function(){
-        var id_remove = "id="+$('.close-icon', $(this).attr('id'));
-        alert(id_remove);
-        jQuery.ajax({
-            type: "POST", // HTTP метод  POST
-            url: "ajax/delete", //url-адрес, по которому будет отправлен запрос
-            dataType:"text", // Тип данных,  которые пришлет сервер в ответ на запрос ,например, HTML, json
-            data:id_remove, //данные, которые будут отправлены на сервер (post переменные)
-            success:function(response){
-                if(response === ''){
-                    alert('PUSTO');
-                    alert(response);
-                }else if(response != ''){
-                    alert('NE PUSTO');
-                    alert(response);
-                }
-            },
-            error:function (xhr, ajaxOptions, thrownError){
-                alert(thrownError); //выводим ошибку
-            }
-        });
-    });
-});*/
-/*************************************************************************/
 /************************* Проверка юзера ********************************/
 function checkUser(){
     var valid = true;
@@ -92,13 +67,12 @@ function checkUser(){
         });
     }
 }
-/*************************************************************************/
 /******************* Функция удаления категории **************************/
 function delCat(id){
     var myData = "id="+id;
     jQuery.ajax({
         type: "POST", // HTTP метод  POST
-        url: "http://list/administrator/ajax/delete/", //url-адрес, по которому будет отправлен запрос
+        url: "http://list/administrator/category/delete/", //url-адрес, по которому будет отправлен запрос
         dataType:"text", // Тип данных,  которые пришлет сервер в ответ на запрос ,например, HTML, json
         data:myData, //данные, которые будут отправлены на сервер (post переменные)
         success:function(response){
@@ -118,7 +92,6 @@ function delCat(id){
 }
 /*********************** Функция добавления новой категории ******************/
 function addCat(token){
-    alert(token);
     var url = "http://list/administrator/category/insert/token/"+token;
     window.location.href = url;
 }

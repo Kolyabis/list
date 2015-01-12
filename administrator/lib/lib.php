@@ -6,6 +6,10 @@ class lib{
             return $arr;
         }
     }
+    /************************************ Метод для отрисоки пути **********************************/
+    public static function set_link(){
+        return 'http://list/administrator/';
+    }
     /******************************* Метод проверки ЮЗЕРА и возврат ajax ***************************/
     public function checkUser($login = null, $pass = null, $db){
         $queryUser = $db->query("SELECT `token` FROM user WHERE `name` = '$login' and `pass` = '$pass'");
@@ -106,8 +110,8 @@ class lib{
         return $main_category;
     }
     /************************************** Метод удаления категории ***********************************/
-    public function del_cat($id, $db){
-        $db->query("DELETE FROM category WHERE id=$id");
+    public function del_cat($id, $db, $tab_name){
+        $db->query("DELETE FROM $tab_name WHERE id=$id");
         echo $id;
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>CPanel</title>
@@ -27,7 +27,46 @@
         </div>
     </div>
     <div class="bodyInfo">
-        <p>Новая категория</p>
+        <form name="form_category" method="post" action="">
+        <div style="float: right;">
+            <input class="button" type="button" value="<?php echo lib::lan('save'); ?>" onClick="saveCat()"/>
+        </div>
+        <div class="section">
+            <ul class="tabs">
+                <li class="current"><?php echo lib::lan('new_cat'); ?></li>
+                <li><?php echo lib::lan('description_cat'); ?></li>
+                <li>Третья вкладка</li>
+                <li>Червертая вкладка</li>
+            </ul>
+            <div class="box visible">
+                <label><?php echo lib::lan('name_cat'); ?>:<br/><input type="text" id="name_cat" name="name_cat" size="40"/></label><br/>
+                <label><?php echo lib::lan('alias_cat'); ?>:<br/><input type="text" id="alias_cat" name="alias_cat" size="40"/></label><br/>
+                <label><?php echo lib::lan('und_cat'); ?>:<br/>
+                    <select size="1" id="und_cat" name="und_cat">
+                        <option value="0"><?php echo lib::lan('disabled'); ?></option>
+                        <?php for($i = 0; $i < count($params['list_cat']); $i++){;?>
+                            <option value="<?php echo $params['list_cat'][$i]['id']; ?>"><?php echo $params['list_cat'][$i]['name']; ?></option>
+                        <?php }; ?>
+                    </select>
+                </label><br/>
+                <label><?php echo lib::lan('status'); ?>:<br/>
+                    <p>
+                        <input checked="checked" type="radio" name="status" value="1" id="radio_cat_yes"><label for="radio_cat_yes"> <?php echo lib::lan('yes'); ?></label>
+                        <input type="radio" name="status" value="0" id="radio_cat_no"><label for="radio_cat_no"> <?php echo lib::lan('no'); ?></label>
+                    </p>
+                </label><br/>
+            </div>
+            <div class="box">
+                <label><?php echo lib::lan('description'); ?>:<br/><textarea rows="15" cols="60" name="description_cat"></textarea></label><br/>
+            </div>
+            <div class="box">
+                    <p>параграф</p>
+            </div>
+            <div class="box">
+                    <p>параграф</p>
+            </div>
+        </div>
+        </form>
        <div style="margin: 15px; border: 1px solid #787878; border-radius: 3px; padding: 3px; margin-left: auto; margin-right: auto">
             <div style="float: left;">
                 <p>Наименование категории:</p>
@@ -40,4 +79,19 @@
        </div>
     </div>
 </body>
+<script type="text/javascript">
+    (function($) {
+        $(function() {
+
+            $('ul.tabs').delegate('li:not(.current)', 'click', function() {
+                $(this).addClass('current').siblings().removeClass('current')
+                    .parents('div.section').find('div.box').hide().eq($(this).index()).fadeIn(150);
+            })
+
+        })
+    })(jQuery)
+    function saveCat(){
+        alert('SAVE');
+    }
+</script>
 </html>

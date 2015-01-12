@@ -7,7 +7,7 @@ class CpanelModel{
         $params['login'] = $lib->get_user($params['token'], $db);
         $params['last_modifay_table'] = $lib->get_table($db);
         /* Присоединяю массив меню панели */
-        $params['menuPanel'] = $lib->menuPanel();;
+        $params['menuPanel'] = $lib->menuPanel();
         $lib->checkArray($params);
         include(__DIR__.'/'.$file);
     }

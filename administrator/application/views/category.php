@@ -40,7 +40,6 @@
                     echo "<ul>";
                     for($i = 0; $i < count($arr[$parent_id]) ;$i++){
                         echo "<li id='".$arr[$parent_id][$i]['id']."'>
-                                <span>
                                     <a href='/administrator/category/update/token/".$token."/id/".$arr[$parent_id][$i]['id']."'>
                                         ".$arr[$parent_id][$i]['name']."
                                             <div class='disabled_link' style='float: right;'>
@@ -48,7 +47,8 @@
                                             </div>
                                     </a>
                                     <span class='close-icon' id='".$arr[$parent_id][$i]['id']."' onClick=delCat(".$arr[$parent_id][$i]['id'].")></span>
-                                </span>";
+                                    <span class='edit-icon' id='".$arr[$parent_id][$i]['id']."' onClick=editCat(".$arr[$parent_id][$i]['id'].")></span>
+                                ";
                         //echo "<span id='close-icon'></span>";
                         list_category($arr, $token, $arr[$parent_id][$i]['id']);
                         echo "</li>\n";
@@ -64,7 +64,7 @@
     <div id="error" style="display: none;"></div>
     <div style="float: right; margin-left: 25px"></div>
 </body>
-<pre>
-        <?php //print_r($params['category']); ?>
-    </pre>
+<!--<pre>
+        <?php /*//print_r($params['category']); */?>
+    </pre>-->
 </html>

@@ -9,14 +9,21 @@ class categoryController implements IController{
         $fc->setBody($result);
     }
     public function updateAction(){}
-    /* Экшен для добавления новой категории */
+    /********************************* Экшен для добавления новой категории ******************************/
     public function insertAction(){
         $fc = FrontController::getInstance();
         $params = $fc->getParams();
         $view = new categoryModel();
         $view->params = $params;
-        $result = $view->set_newCategory('../views/categoryAdd.php', $params);
+        $result = $view->addCategory('../views/categoryAdd.php', $params);
         $fc->setBody($result);
     }
-    public function deleteAction(){}
+    /******************************* Метод контроллера удаления категории AJAX ****************************/
+    public function deleteAction(){
+        $fc = FrontController::getInstance();
+        $params = $fc->getParams();
+        $view = new categoryModel();
+        $result = $view->del_category('../views/ajax.php', $params);
+        $fc->setBody($result);
+    }
 }

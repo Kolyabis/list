@@ -309,7 +309,7 @@ ul                  { list-style: none; }
 #page-wrap		    { width: 500px; margin: 0 auto; }
 #project-list {
     background:transparent url(/images/icon/graypixel.png) repeat-y scroll 15px 0;
-    width: 97%;
+    width: 87%;
 }
 #project-list li {
     font-size:18px;
@@ -317,10 +317,10 @@ ul                  { list-style: none; }
     padding:0 0 0 10px;
 }
 #project-list li a {
-    background: rgb(232, 232, 232) none repeat scroll 0 0;
+    background: rgb(239, 239, 239) none repeat scroll 0 0;
     color:#1F6DD9;
     display:block;
-    border: 1px solid #787878;
+    border: 1px solid #9f9f9f;
     padding:3px;
 
 }
@@ -331,7 +331,7 @@ ul                  { list-style: none; }
     background:transparent url(/images/icon/graypixel.png) repeat-x scroll 0 8px;
     font-size:18px;
     margin:4px 0 4px 5px;
-    padding:0 0 0 20px;
+    padding:0 0 0 6px;
 }
 #project-list li ul li a {
     padding:0 0 0 3px;
@@ -349,16 +349,139 @@ ul                  { list-style: none; }
     padding-right: 15px;
 }
 /***********************************************************************************************************************/
+/***************************** Стили для вертикальных и горизонтальных вкладок форм ************************************/
+.section {
+    width: 600px;
+    background: #EFEFEF;
+    margin: 0 0 30px;
+}
+ul.tabs {
+    height: 28px;
+    line-height: 25px;
+    list-style: none;
+    border-bottom: 1px solid #DDD;
+    background: #FFF;
+}
+.tabs li {
+    float: left;
+    display: inline;
+    margin: 0 1px -1px 0;
+    padding: 0 13px 1px;
+    color: #777;
+    cursor: pointer;
+    background: #F9F9F9;
+    border: 1px solid #E4E4E4;
+    border-bottom: 1px solid #F9F9F9;
+    position: relative;
+}
+.tabs li:hover,
+.vertical .tabs li:hover {
+    color: #F70;
+    padding: 0 13px;
+    background: #FFFFDF;
+    border: 1px solid #FFCA95;
+}
+.tabs li.current {
+    color: #444;
+    background: #EFEFEF;
+    padding: 0 13px 2px;
+    border: 1px solid #D4D4D4;
+    border-bottom: 1px solid #EFEFEF;
+}
+.box {
+    display: none;
+    border: 1px solid #D4D4D4;
+    border-width: 0 1px 1px;
+    background: #EFEFEF;
+    padding: 0 12px;
+}
+.box.visible {
+    display: block;
+}
+
+.section.vertical {
+    width: 440px;
+    border-left: 160px solid #FFF;
+}
+.vertical .tabs {
+    width: 160px;
+    float: left;
+    display: inline;
+    margin: 0 0 0 -160px;
+}
+.vertical .tabs li {
+    padding: 0 13px;
+    margin: 0 0 1px;
+    border: 1px solid #E4E4E4;
+    border-right: 1px solid #F9F9F9;
+    width: 132px;
+    height: 25px;
+}
+.vertical .tabs li:hover {
+    width: 131px;
+}
+.vertical .tabs li.current {
+    width: 133px;
+    color: #444;
+    background: #EFEFEF;
+    border: 1px solid #D4D4D4;
+    border-right: 1px solid #EFEFEF;
+    margin-right: -1px;
+}
+.vertical .box {
+    border-width: 1px;
+}
+/***********************************************************************************************************************/
 .close-icon{
     width: 23px;
     height: 23px;
-    background: url(/images/icon/close-icon.png) no-repeat top;
+    background: url(/images/icon/Recycle-Closed.png) no-repeat top;
     float: right;
     background-size: 23px 23px, auto;
     padding-left: 15px;
     margin:-28px -40px 0px 0px;
     cursor: pointer;
 }
+.close-icon:hover{
+    width: 23px;
+    height: 23px;
+    background: url(/images/icon/Recycle-Open.png) no-repeat top;
+    float: right;
+    background-size: 23px 23px, auto;
+    padding-left: 15px;
+    margin:-28px -40px 0px 0px;
+    cursor: pointer;
+}
+.edit-icon{
+    width: 23px;
+    height: 23px;
+    background: url(/images/icon/Machine.png) no-repeat top;
+    float: right;
+    background-size: 23px 23px, auto;
+    padding-left: 15px;
+    margin:-28px -65px 0px 0px;
+    cursor: pointer;
+}
+.button{
+    padding: 3px 5px 3px 5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    border: 1px solid #787878;
+    border-radius: 3px;
+    color: #ffffff;
+    background: #3B5998;
+}
+.button:hover{
+     padding: 3px 5px 3px 5px;
+     font-family: 'Open Sans Condensed', sans-serif;
+     font-style: normal;
+     font-size: 16px;
+     border: 1px solid #787878;
+     border-radius: 3px;
+     color: #FFFFFF;
+     background: #9F0002;
+ }
 #addCat{
     max-width: 100%;
     border: 1px solid #787878;
@@ -433,7 +556,48 @@ ul                  { list-style: none; }
     width: 440px;
     float: right;
 }
-
+/*********************************** класс меню с большими иконками **************************************/
+.info{
+    max-width: 630px;
+    width: 630px;
+    padding-left: 5px;
+}
+.cpanel{
+    float: left;
+    padding: 0px 5px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+#big-menu{
+    padding: 5px;
+    background: #4F81BD;
+    width: 110px;
+    height: 100px;
+    text-align: center;
+    border-radius: 3px;
+}
+#big-menu:hover{
+    padding: 5px;
+    background: #9F0002;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.75); /* Тень текста, чтобы приподнять его на немного */
+    width: 110px;
+    height: 100px;
+    text-align: center;
+    border-radius: 3px;
+}
+#menu-link{
+    color: #C5C4C4;
+}
+#menu-link:hover{
+    color: #C5C4C4;
+}
+#icon-big{
+    width: 60px;
+    height: 60px;
+    background-size: 48px 48px, auto;
+}
+/*********************************************************************************************************/
 /*********************************** Стили для выпадающего меню ******************************************/
 /*#ddcat {*/
     /*display: block;*/

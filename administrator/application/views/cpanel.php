@@ -22,8 +22,15 @@
         </div>
     </div>
     <div class="bodyInfo">
-        <div style="float: right;">
-            <div class="info">
+        <div class="cpanel">
+            <?php foreach($params['menuPanel'] as $key => $val){;?>
+                <div id="big-menu" style="float: left; margin-right: 8px;">
+                    <a id="menu-link" href="/administrator/<?php echo $key; ?>/index/token/<?php echo $params['token']; ?>"><img id="icon-big" src="/images/icon/<?php echo $key; ?>-big.png" alt=""/><br /><?php echo $val; ?></a>
+                </div>
+            <?php } ?>
+        </div>
+        <div class="info" style="float: right;">
+            <div >
                 <?php
                     $modify = $params['last_modifay_table'];
                     $cnt = count($modify);
@@ -49,7 +56,4 @@
     <div id="error" style="display: none;"></div>
     <div style="float: right; margin-left: 25px"></div>
 </body>
-<pre>
-        <?php print_r($params); ?>
-    </pre>
 </html>
